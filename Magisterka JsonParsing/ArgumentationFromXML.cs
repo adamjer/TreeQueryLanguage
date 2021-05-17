@@ -103,7 +103,7 @@ namespace Magisterka_JsonParsing
         {
             public String Weight { get; set; }
             public Assessment Assessment { get; set; }
-            public AssessmentHistory AssessmentHistory { get; set; }
+            public AssessmentHistory? AssessmentHistory { get; set; }
         }
 
         public class Strategy : Node

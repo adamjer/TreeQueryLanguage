@@ -1,0 +1,115 @@
+{
+  "assurance_case": {
+    "name": "AssuranceCase-V1",
+    "arguments": [
+      {
+        "nodes": [
+          {
+            "type": "claim",
+            "id": 1,
+            "label": "C1",
+            "name": "System is safe"
+          },
+          {
+            "type": "strategy",
+            "id": 2,
+            "label": "S1",
+            "name": "Argue by testing",
+            "parent": 1
+          },
+          {
+            "type": "justification",
+            "id": 3,
+            "label": "J1",
+            "name": "We think tests are sufficient",
+            "parent": 2
+          },
+          {
+            "type": "claim",
+            "id": 4,
+            "label": "C2",
+            "name": "We have a test plan",
+            "parent": 2
+          },
+          {
+            "type": "evidence",
+            "id": 5,
+            "label": "Ev2",
+            "name": "Test plan",
+            "filename": "test plan.docx",
+            "parent": 4
+          },
+          {
+            "type": "claim",
+            "id": 6,
+            "label": "C3",
+            "name": "The test result is positive",
+            "parent": 2
+          },
+          {
+            "type": "evidence",
+            "id": 7,
+            "label": "Ev3",
+            "name": "Test report",
+            "filename": "test report.docx",
+            "parent": 6
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "type": "claim",
+            "id": 8,
+            "label": "C4",
+            "name": "System is responsive"
+          },
+          {
+            "type": "strategy",
+            "id": 9,
+            "label": "S2",
+            "name": "Argue by user experience",
+            "parent": 8
+          },
+          {
+            "type": "justification",
+            "id": 10,
+            "label": "J2",
+            "name": "Users think GUI works great",
+            "parent": 9
+          },
+          {
+            "type": "claim",
+            "id": 11,
+            "label": "C5",
+            "name": "We have a test plan",
+            "parent": 9
+          },
+          {
+            "type": "evidence",
+            "id": 12,
+            "label": "Ev1",
+            "name": "User experince",
+            "filename": "recording.mp4",
+            "parent": 11
+          },
+          {
+            "type": "claim",
+            "id": 13,
+            "label": "C6",
+            "name": "The test result is positive",
+            "parent": 9
+          },
+          {
+            "type": "evidence",
+            "id": 14,
+            "label": "Ev2",
+            "name": "Test report",
+            "filename": "test report.docx",
+            "parent": 13
+          }
+        ]
+      }
+    ]
+  }
+}

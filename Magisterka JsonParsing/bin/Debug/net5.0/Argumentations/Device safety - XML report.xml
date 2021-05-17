@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<report>
+  <header>
+    <userName>Senior Demon</userName>
+    <timestamp>2021-04-30T09:27:14</timestamp>
+    <generator>services.argevide.com</generator>
+    <locale>en</locale>
+  </header>
+  <project id="60735">
+    <name>Device safety</name>
+    <symbol>DEV-SAFETY</symbol>
+    <folder>Assurance case - device</folder>
+    <path>DEMO / TUT / AS-DEV</path>
+    <assessmentMethod type="D-S">Dempster-Shafer</assessmentMethod>
+    <description></description>
+    <node id="40176079373" type="information">
+      <name>Device safety</name>
+      <label></label>
+      <description></description>
+      <nodes>
+        <node id="40176079374" type="claim">
+          <name>Device is adequately safe</name>
+          <label>Claim 1</label>
+          <description></description>
+          <assessment>
+            <confidence degree="4" maxDegree="5" value="0.7027779">with very high confidence</confidence>
+            <decision degree="3" maxDegree="3" value="0.9516917">acceptable</decision>
+            <comment></comment>
+            <excluded>false</excluded>
+          </assessment>
+          <nodes>
+            <node id="40176079389" type="information">
+              <name>- Device specification - Intended use - IEC 61508</name>
+              <label>Context 1</label>
+              <description></description>
+            </node>
+            <node id="40176079375" type="strategy">
+              <name>Safety ensured by implementing safety functions</name>
+              <label>Strategy 1</label>
+              <description></description>
+              <counterArgumentation>false</counterArgumentation>
+              <assessment>
+                <confidence degree="4" maxDegree="5" value="0.7027779">with very high confidence</confidence>
+                <decision degree="3" maxDegree="3" value="0.9516917">acceptable</decision>
+                <comment></comment>
+                <excluded>false</excluded>
+              </assessment>
+              <nodes>
+                <node id="40176079376" type="rationale">
+                  <name>Safety management process complies with the IEC 61508</name>
+                  <label>Rationale 1</label>
+                  <description></description>
+                  <aggregationRule>Complementary (C-rule)</aggregationRule>
+                  <assessment>
+                    <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                    <comment></comment>
+                    <excluded>false</excluded>
+                    <userName>Senior Demon</userName>
+                    <timestamp>2021-04-30T09:24:25.0533333</timestamp>
+                  </assessment>
+                  <assessmentHistory>
+                    <assessment isChange="yes">
+                      <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                      <comment></comment>
+                      <excluded>false</excluded>
+                      <userName>Senior Demon</userName>
+                      <timestamp>2021-04-30T09:24:25.0533333</timestamp>
+                    </assessment>
+                    <assessment isChange="yes">
+                      <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                      <decision degree="" maxDegree="3" value="">no assessment</decision>
+                      <comment></comment>
+                      <excluded>false</excluded>
+                      <userName>Senior Demon</userName>
+                      <timestamp>2021-04-30T09:24:04.1633333</timestamp>
+                    </assessment>
+                    <assessment isChange="yes">
+                      <confidence />
+                      <decision degree="" maxDegree="3" value="">excluded from assessment</decision>
+                      <comment></comment>
+                      <excluded>true</excluded>
+                      <userName>Andrzej Wardziński</userName>
+                      <timestamp>2021-04-11T23:21:36.1266667</timestamp>
+                    </assessment>
+                  </assessmentHistory>
+                </node>
+                <node id="40176079377" type="fact">
+                  <name>Safety functions identified in Hazard Analysis</name>
+                  <label>Fact 1</label>
+                  <description></description>
+                  <weight>5</weight>
+                  <assessment>
+                    <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                    <comment></comment>
+                    <excluded>false</excluded>
+                    <userName>Senior Demon</userName>
+                    <timestamp>2021-04-30T09:24:39.71</timestamp>
+                  </assessment>
+                  <assessmentHistory>
+                    <assessment isChange="yes">
+                      <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                      <comment></comment>
+                      <excluded>false</excluded>
+                      <userName>Senior Demon</userName>
+                      <timestamp>2021-04-30T09:24:39.71</timestamp>
+                    </assessment>
+                    <assessment isChange="yes">
+                      <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                      <decision degree="" maxDegree="3" value="">no assessment</decision>
+                      <comment></comment>
+                      <excluded>false</excluded>
+                      <userName>Senior Demon</userName>
+                      <timestamp>2021-04-30T09:24:04.4433333</timestamp>
+                    </assessment>
+                    <assessment isChange="yes">
+                      <confidence />
+                      <decision degree="" maxDegree="3" value="">excluded from assessment</decision>
+                      <comment></comment>
+                      <excluded>true</excluded>
+                      <userName>Andrzej Wardziński</userName>
+                      <timestamp>2021-04-11T23:21:36.1266667</timestamp>
+                    </assessment>
+                  </assessmentHistory>
+                  <nodes>
+                    <node id="40176079387" type="reference">
+                      <name>Hazard Analysis Report</name>
+                      <label>Evidence 1.1</label>
+                      <description></description>
+                      <repositoryName />
+                      <repository />
+                      <address>a</address>
+                      <autoUpdate>true</autoUpdate>
+                      <validityDate />
+                      <maxValidityPeriod />
+                    </node>
+                  </nodes>
+                </node>
+                <node id="40176079378" type="claim">
+                  <name>All safety functions are implemented</name>
+                  <label>Claim 2</label>
+                  <description></description>
+                  <weight>5</weight>
+                  <assessment>
+                    <confidence degree="3" maxDegree="5" value="0.5847458">with high confidence</confidence>
+                    <decision degree="3" maxDegree="3" value="0.8850596">acceptable</decision>
+                    <comment></comment>
+                    <excluded>false</excluded>
+                  </assessment>
+                  <nodes>
+                    <node id="40176079379" type="strategy">
+                      <name>Implementation ensured by the development process</name>
+                      <label>Strategy 2</label>
+                      <description></description>
+                      <counterArgumentation>false</counterArgumentation>
+                      <assessment>
+                        <confidence degree="3" maxDegree="5" value="0.5847458">with high confidence</confidence>
+                        <decision degree="3" maxDegree="3" value="0.8850596">acceptable</decision>
+                        <comment></comment>
+                        <excluded>false</excluded>
+                      </assessment>
+                      <nodes>
+                        <node id="40176079380" type="rationale">
+                          <name>The development process ensures required safety integrity level</name>
+                          <label>Rationale 2</label>
+                          <description></description>
+                          <aggregationRule>Complementary (C-rule)</aggregationRule>
+                          <assessment>
+                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                            <comment></comment>
+                            <excluded>false</excluded>
+                            <userName>Senior Demon</userName>
+                            <timestamp>2021-04-30T09:24:25.13</timestamp>
+                          </assessment>
+                          <assessmentHistory>
+                            <assessment isChange="yes">
+                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:24:25.13</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                              <decision degree="" maxDegree="3" value="">no assessment</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:24:05.5366667</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence />
+                              <decision degree="" maxDegree="3" value="">excluded from assessment</decision>
+                              <comment></comment>
+                              <excluded>true</excluded>
+                              <userName>Andrzej Wardziński</userName>
+                              <timestamp>2021-04-11T23:21:36.1266667</timestamp>
+                            </assessment>
+                          </assessmentHistory>
+                        </node>
+                        <node id="40176079390" type="assumption">
+                          <name>Reliable tools have been used in the development process of the device</name>
+                          <label>Assumption 2.1</label>
+                          <description></description>
+                          <weight>5</weight>
+                          <assessment>
+                            <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                            <decision degree="" maxDegree="3" value="">no assessment</decision>
+                            <comment></comment>
+                            <excluded>false</excluded>
+                          </assessment>
+                          <assessmentHistory>
+                            <assessment isChange="yes">
+                              <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                              <decision degree="" maxDegree="3" value="">no assessment</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:24:07.38</timestamp>
+                            </assessment>
+                          </assessmentHistory>
+                        </node>
+                        <node id="40176079381" type="fact">
+                          <name>Safety requirements are specified</name>
+                          <label>Fact 2.1</label>
+                          <description></description>
+                          <weight>5</weight>
+                          <assessment>
+                            <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                            <comment>Safety requirements are complete. </comment>
+                            <excluded>false</excluded>
+                            <userName>Senior Demon</userName>
+                            <timestamp>2021-04-30T09:25:03.6033333</timestamp>
+                          </assessment>
+                          <assessmentHistory>
+                            <assessment isChange="yes">
+                              <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                              <comment>Safety requirements are complete. </comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:25:03.6033333</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:24:16.0833333</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                              <decision degree="" maxDegree="3" value="">no assessment</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:24:06.0066667</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence />
+                              <decision degree="" maxDegree="3" value="">excluded from assessment</decision>
+                              <comment></comment>
+                              <excluded>true</excluded>
+                              <userName>Andrzej Wardziński</userName>
+                              <timestamp>2021-04-11T23:21:36.1266667</timestamp>
+                            </assessment>
+                          </assessmentHistory>
+                          <nodes>
+                            <node id="40176079384" type="reference">
+                              <name>Safety Requirements Specification</name>
+                              <label>Evidence 2.1</label>
+                              <description>version 1.1 </description>
+                              <repositoryName />
+                              <repository />
+                              <address>a</address>
+                              <autoUpdate>true</autoUpdate>
+                              <validityDate />
+                              <maxValidityPeriod />
+                            </node>
+                          </nodes>
+                        </node>
+                        <node id="40176079382" type="fact">
+                          <name>Tests cover all safety requirements</name>
+                          <label>Fact 2.2</label>
+                          <description></description>
+                          <weight>5</weight>
+                          <assessment>
+                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                            <decision degree="2" maxDegree="3" value="0.6666667">tolerable</decision>
+                            <comment></comment>
+                            <excluded>false</excluded>
+                            <userName>Senior Demon</userName>
+                            <timestamp>2021-04-30T09:25:08.4633333</timestamp>
+                          </assessment>
+                          <assessmentHistory>
+                            <assessment isChange="yes">
+                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                              <decision degree="2" maxDegree="3" value="0.6666667">tolerable</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:25:08.4633333</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                              <decision degree="" maxDegree="3" value="">no assessment</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:24:06.49</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence />
+                              <decision degree="" maxDegree="3" value="">excluded from assessment</decision>
+                              <comment></comment>
+                              <excluded>true</excluded>
+                              <userName>Andrzej Wardziński</userName>
+                              <timestamp>2021-04-11T23:21:36.1266667</timestamp>
+                            </assessment>
+                          </assessmentHistory>
+                          <nodes>
+                            <node id="40176079385" type="reference">
+                              <name>Test Plan</name>
+                              <label>Evidence 2.2</label>
+                              <description></description>
+                              <repositoryName />
+                              <repository />
+                              <address>a</address>
+                              <autoUpdate>true</autoUpdate>
+                              <validityDate />
+                              <maxValidityPeriod />
+                            </node>
+                          </nodes>
+                        </node>
+                        <node id="40176079383" type="fact">
+                          <name>Tests confirm all safety requirements are satisfied</name>
+                          <label>Fact 2.3</label>
+                          <description></description>
+                          <weight>5</weight>
+                          <assessment>
+                            <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                            <comment>Some test scenarios have not been executed or results not documented </comment>
+                            <excluded>false</excluded>
+                            <userName>Senior Demon</userName>
+                            <timestamp>2021-04-30T09:25:57.0433333</timestamp>
+                          </assessment>
+                          <assessmentHistory>
+                            <assessment isChange="yes">
+                              <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                              <comment>Some test scenarios have not been executed or results not documented </comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:25:57.0433333</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:25:14.0266667</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                              <decision degree="" maxDegree="3" value="">no assessment</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>Senior Demon</userName>
+                              <timestamp>2021-04-30T09:24:06.9433333</timestamp>
+                            </assessment>
+                            <assessment isChange="yes">
+                              <confidence />
+                              <decision degree="" maxDegree="3" value="">excluded from assessment</decision>
+                              <comment></comment>
+                              <excluded>true</excluded>
+                              <userName>Andrzej Wardziński</userName>
+                              <timestamp>2021-04-11T23:21:36.1266667</timestamp>
+                            </assessment>
+                          </assessmentHistory>
+                          <nodes>
+                            <node id="40176079386" type="reference">
+                              <name>Test Report</name>
+                              <label>Evidence 2.3</label>
+                              <description></description>
+                              <repositoryName />
+                              <repository />
+                              <address>a</address>
+                              <autoUpdate>true</autoUpdate>
+                              <validityDate />
+                              <maxValidityPeriod />
+                            </node>
+                          </nodes>
+                        </node>
+                      </nodes>
+                    </node>
+                  </nodes>
+                </node>
+              </nodes>
+            </node>
+          </nodes>
+        </node>
+      </nodes>
+    </node>
+  </project>
+  <sections>
+    <section id="1" mainElementId="40176079373">
+      <sectionElement id="40176079374" />
+    </section>
+    <section id="2" parentSectionId="1" mainElementId="40176079374">
+      <sectionElement id="40176079389" />
+      <sectionElement id="40176079375" />
+      <sectionElement id="40176079376" />
+      <sectionElement id="40176079377" />
+      <sectionElement id="40176079387" />
+      <sectionElement id="40176079378" />
+    </section>
+    <section id="3" parentSectionId="2" mainElementId="40176079378">
+      <sectionElement id="40176079379" />
+      <sectionElement id="40176079380" />
+      <sectionElement id="40176079390" />
+      <sectionElement id="40176079381" />
+      <sectionElement id="40176079384" />
+      <sectionElement id="40176079382" />
+      <sectionElement id="40176079385" />
+      <sectionElement id="40176079383" />
+      <sectionElement id="40176079386" />
+    </section>
+  </sections>
+</report>

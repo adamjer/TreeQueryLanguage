@@ -1,0 +1,25 @@
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Magisterka JsonParsing.exe
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Magisterka JsonParsing.deps.json
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Magisterka JsonParsing.runtimeconfig.json
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Magisterka JsonParsing.runtimeconfig.dev.json
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Magisterka JsonParsing.dll
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\ref\Magisterka JsonParsing.dll
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Magisterka JsonParsing.pdb
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.csprojAssemblyReference.cache
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.AssemblyInfoInputs.cache
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.AssemblyInfo.cs
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.csproj.CoreCompileInputs.cache
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.csproj.CopyComplete
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.dll
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\ref\Magisterka JsonParsing.dll
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.pdb
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\obj\Debug\net5.0\Magisterka JsonParsing.genruntimeconfig.cache
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Argumentations\argument1-v1.json
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Argumentations\argument1-v2.json
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Argumentations\argument1-v3.json
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Argumentations\argument1-v4.json
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Argumentations\Device safety - XML export.tct
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Argumentations\Device safety - XML report.xml
+C:\Users\Adam Jereczek\source\repos\Magisterka JsonParsing\Magisterka JsonParsing\bin\Debug\net5.0\Argumentations\test.json

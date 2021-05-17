@@ -1,0 +1,111 @@
+{
+  "assurance_case": {
+    "name": "AssuranceCase-V2",
+    "arguments": [
+      {
+        "type": "claim",
+        "id": 1,
+        "label": "C1",
+        "name": "System is safe",
+        "supporting_nodes": [
+          {
+            "type": "strategy",
+            "id": 2,
+            "label": "S1",
+            "name": "Argue by testing",
+            "supporting_nodes": [
+              {
+                "type": "justification",
+                "id": 3,
+                "label": "J1",
+                "name": "We think tests are sufficient"
+              },
+              {
+                "type": "claim",
+                "id": 4,
+                "label": "C2",
+                "name": "We have a test plan",
+                "supporting_nodes": [
+                  {
+                    "type": "evidence",
+                    "id": 5,
+                    "label": "Ev2",
+                    "name": "Test plan",
+                    "filename": "test plan.docx"
+                  }
+                ]
+              },
+              {
+                "type": "claim",
+                "id": 6,
+                "label": "C3",
+                "name": "The test result is positive",
+                "supporting_nodes": [
+                  {
+                    "type": "evidence",
+                    "id": 7,
+                    "label": "Ev3",
+                    "name": "Test report",
+                    "filename": "test report.docx"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "claim",
+        "id": 8,
+        "label": "C4",
+        "name": "System is responsive",
+        "supporting_nodes": [
+          {
+            "type": "strategy",
+            "id": 9,
+            "label": "S2",
+            "name": "Argue by user experience",
+            "supporting_nodes": [
+              {
+                "type": "justification",
+                "id": 10,
+                "label": "J2",
+                "name": "Users think GUI works great"
+              },
+              {
+                "type": "claim",
+                "id": 11,
+                "label": "C5",
+                "name": "We have a test plan",
+                "supporting_nodes": [
+                  {
+                    "type": "evidence",
+                    "id": 12,
+                    "label": "Ev1",
+                    "name": "User experince",
+                    "filename": "recording.mp4"
+                  }
+                ]
+              },
+              {
+                "type": "claim",
+                "id": 13,
+                "label": "C6",
+                "name": "The test result is positive",
+                "supporting_nodes": [
+                  {
+                    "type": "evidence",
+                    "id": 14,
+                    "label": "Ev2",
+                    "name": "Test report",
+                    "filename": "test report.docx"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

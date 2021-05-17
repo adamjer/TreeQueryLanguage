@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sEMaSdEraSYYrjhl2cvuT/phwJhJdVZynRaTmOoKOh+WhbdgL+eRxFZk1w3fNIFilXtFHrGeYtX01/EUc5H/bA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Adam Jereczek\\source\\repos\\Tree-Query-Language\\Magisterka JsonParsing\\Magisterka JsonParsing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Adam Jereczek\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
