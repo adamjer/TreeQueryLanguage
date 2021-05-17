@@ -139,3 +139,6 @@ C:\Users\Adam Jereczek\source\repos\Tree-Query-Language\Magisterka JsonParsing\b
 C:\Users\Adam Jereczek\source\repos\Tree-Query-Language\Magisterka JsonParsing\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Adam Jereczek\source\repos\Tree-Query-Language\Magisterka JsonParsing\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Adam Jereczek\source\repos\Tree-Query-Language\Magisterka JsonParsing\obj\Debug\Magisterka JsonParsing.csproj.CopyComplete
+C:\Users\Adam Jereczek\source\repos\Tree-Query-Language\Magisterka JsonParsing\bin\Debug\Argumentations\Device safety - XML report.xml
+C:\Users\Adam Jereczek\source\repos\Tree-Query-Language\Magisterka JsonParsing\bin\Debug\Argumentations\Device safety - XML export.tct
+C:\Users\Adam Jereczek\source\repos\Tree-Query-Language\Magisterka JsonParsing\bin\Debug\Argumentations\test.json

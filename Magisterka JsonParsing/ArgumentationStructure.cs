@@ -37,7 +37,7 @@ namespace Magisterka_JsonParsing
             {
                 ParentId = -1;
                 Id = -2;
-                Type = "NotInitialized";
+                //Type = "NotInitialized";
                 Label = "NotInitalized";
                 Name = "NotInitilized";
             }
@@ -49,8 +49,8 @@ namespace Magisterka_JsonParsing
                 return false;
             }
 
-            [JsonProperty("type")]
-            public string Type { get; set; }
+            //[JsonProperty("type")]
+            //public string Type { get; set; }
 
             [JsonProperty("id")]
             public int Id { get; set; }
@@ -86,7 +86,6 @@ namespace Magisterka_JsonParsing
         {
             [JsonProperty("assurance_case")]
             public AssuranceCase AssuranceCase { get; set; }
-
         }
 
         public class ArgumentsConverter : JsonConverter

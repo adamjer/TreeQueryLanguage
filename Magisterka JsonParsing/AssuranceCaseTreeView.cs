@@ -290,5 +290,10 @@ namespace Magisterka_JsonParsing
         {
 
         }
+
+        public AssuranceCaseTreeView(ArgumentationFromXML.Report report)
+        {
+
+        }
     }
 }
