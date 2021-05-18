@@ -33,9 +33,9 @@ namespace Magisterka_JsonParsing
         {
             [JsonProperty("@id")]
             public String ID { get; set; }
-            [JsonProperty("@type")]
+            //[JsonProperty("@type")]
             //public String Type { get; set; }
-            //[JsonProperty("name")]
+            [JsonProperty("name")]
             public String Name { get; set; }
             [JsonProperty("label")]
             public String Label { get; set; }
@@ -133,8 +133,8 @@ namespace Magisterka_JsonParsing
             public String Repository { get; set; }
             public String Address { get; set; }
             public String AutoUpdate { get; set; }
-            public String ValidityDate { get; set; } //originally DateTime
-            public String MaxvalidityPeriod { get; set; } //originally DateTime
+            public DateTime? ValidityDate { get; set; }
+            public DateTime? MaxvalidityPeriod { get; set; }
         }
 
         public class Assumption : Node
@@ -177,27 +177,26 @@ namespace Magisterka_JsonParsing
         public class SectionElement
         {
             [JsonProperty("@id")]
-            String ID { get; set; }
+            public String ID { get; set; }
         }
 
         public class Section
         {
             [JsonProperty("@id")]
             public String ID { get; set; }
-            [JsonProperty("parentSectionId")]
+            [JsonProperty("@parentSectionId")]
             public String ParentSectionID { get; set; }
-            [JsonProperty("mainElementId")]
+            [JsonProperty("@mainElementId")]
             public String MainElementID { get; set; }
             [JsonProperty("sectionElement")]
             public List<SectionElement> SectionElements { get; set; }
-
 
         }
 
         public class Sections
         {
             [JsonProperty("section")]
-            List<Section> Section { get; set; }
+            public List<Section> Section { get; set; }
         }
 
         public class Report
