@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace Magisterka_JsonParsing
 {
-
     namespace TreeStructure
     {
         public class Root : Node
@@ -287,11 +286,6 @@ namespace Magisterka_JsonParsing
         }
 
         public AssuranceCaseTreeView(ArgumentationV4.AssuranceCase assuranceCase)
-        {
-
-        }
-
-        public AssuranceCaseTreeView(ArgumentationFromXML.Report report)
         {
 
         }

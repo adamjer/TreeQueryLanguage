@@ -54,28 +54,42 @@ namespace Magisterka_JsonParsing
                     ArgumentationV4.ArgumentationStructure assuranceCase = JsonConvert.DeserializeObject<ArgumentationV4.ArgumentationStructure>(jsonContent, new ArgumentationV4.ArgumentsConverter());
                 }
 
-                //file = Path.GetFullPath("Argumentations/Device safety - XML report.xml");
-                file = Path.GetFullPath("Argumentations/test.json");
+                file = Path.GetFullPath("Argumentations/Device safety - XML report.xml");
+                //file = Path.GetFullPath("Argumentations/test.json");
                 XmlDocument doc = new XmlDocument();
                 using (StreamReader sr = new StreamReader(file))
                 {
-                    //doc.LoadXml(sr.ReadToEnd());
-                    //var t = doc.ChildNodes[1].ChildNodes[1].ChildNodes[6];
-                    //string json = JsonConvert.SerializeXmlNode(doc);
+                    string xmlRaw = sr.ReadToEnd();
+                    xmlRaw = xmlRaw.Replace(@"<report>", @"<report xmlns:json='http://james.newtonking.com/projects/json'>");
+                    xmlRaw = xmlRaw.ReplaceFirst(@"<node ", @"<root ");
+                    xmlRaw = xmlRaw.Replace(@"<node ", @"<node json:Array='true' ");
+                    xmlRaw = xmlRaw.Replace(@"<section ", @"<section json:Array='true' ");
+                    xmlRaw = xmlRaw.Replace(@"<sectionElement ", @"<sectionElement json:Array='true' ");
+                    xmlRaw = xmlRaw.Replace(@"<assessment isChange=" , @"<assessment json:Array='true' isChange=");
+                    xmlRaw = xmlRaw.ReplaceFirst(@"<root ", @"<node ");
+                    doc.LoadXml(xmlRaw);
 
-                    //var input = "{ 'name': 'root', 'children': [ { 'name': 'First Top', 'children': [ { 'name': 'First child', 'children': [ { 'name': 'value1', 'size': '320' } ] }, { 'dep': 'First Top', 'name': 'First child', 'model': 'value2', 'size': '320' }, { 'dep': 'First Top', 'name': 'First child', 'model': 'value3', 'size': '320' }, { 'dep': 'First Top', 'name': 'First child', 'model': 'value4', 'size': '320' }, { 'dep': 'First Top', 'name': 'SECOND CHILD', 'model': 'value1', 'size': '320' }, { 'dep': 'First Top', 'name': 'SECOND CHILD', 'model': 'value2', 'size': '320' }, { 'dep': 'First Top', 'name': 'SECOND CHILD', 'model': 'value3', 'size': '320' }, { 'dep': 'First Top', 'name': 'SECOND CHILD', 'model': 'value4', 'size': '320' } ] }, { 'name': 'Second Top', 'children': [ { 'name': 'First Child', 'children': [ { 'name': 'value1', 'size': '320' } ] }, { 'dep': 'Second Top', 'name': 'First Child', 'model': 'value2', 'size': '320' }, { 'dep': 'Second Top', 'name': 'First Child', 'model': 'value3', 'size': '320' }, { 'dep': 'Second Top', 'name': 'First Child', 'model': 'value4', 'size': '320' }, { 'dep': 'Second Top', 'name': 'SECOND CHILD', 'model': 'value1', 'size': '320' }, { 'dep': 'Second Top', 'name': 'SECOND CHILD', 'model': 'value2', 'size': '320' }, { 'dep': 'Second Top', 'name': 'SECOND CHILD', 'model': 'value3', 'size': '320' }, { 'dep': 'Second Top', 'name': 'SECOND CHILD', 'model': 'value4', 'size': '320' } ] }, { 'name': 'Third Top', 'children': [ { 'name': 'First Child', 'children': [ { 'name': 'value2', 'size': '320' } ] }, { 'dep': 'Third Top', 'name': 'First Child', 'model': 'value3', 'size': '320' }, { 'dep': 'Third Top', 'name': 'First Child', 'model': 'value4', 'size': '320' }, { 'dep': 'Third Top', 'name': 'First Child', 'model': 'value5', 'size': '320' }, { 'dep': 'Third Top', 'name': 'Second Child', 'model': 'value1', 'size': '320' }, { 'dep': 'Third Top', 'name': 'Second Child', 'model': 'value2', 'size': '320' }, { 'dep': 'Third Top', 'name': 'Second Child', 'model': 'value3', 'size': '320' }, { 'dep': 'Third Top', 'name': 'Second Child', 'model': 'value4', 'size': '320' } ] } ] }";
+                    string json = JsonConvert.SerializeXmlNode(doc);
 
-                    //var root = JObject.Parse(input);
-                    //var rootChildren = (JArray)root["children"];
-                    //var flattened = rootChildren.SelectMany(child => ((JArray)child["children"]).Skip(1)); // Skip the first one as it's irrelevant for the output.
+                    ArgumentationFromXML.AssuranceCase report = JsonConvert.DeserializeObject<ArgumentationFromXML.AssuranceCase>(json, new ArgumentationFromXML.ArgumentsConverter());
+                    report.Report.Project.Init();
 
-                    //// Create a JArray from the flattened collection (of JTokens)
-                    //// to be able to easily output it as a JSON string.
-                    //var jArray = new JArray(flattened);
-                    //var output = jArray.ToString();
+                    ArgumentationFromXML.Root Arguments = new ArgumentationFromXML.Root();
+                    Arguments.Children.Add(report.Report.Project.Root);
 
-                    string test = sr.ReadToEnd();
-                    ArgumentationFromXML.AssuranceCase report = JsonConvert.DeserializeObject<ArgumentationFromXML.AssuranceCase>(test, new ArgumentationFromXML.ArgumentsConverter());
+                    //1) daj elementy argumentacji, które mają pusty opis oceny
+                    var x1 = Arguments.Descendants().Where(n => n.Assessment != null).Where(n => n.Assessment.Comment == "");
+                    //zwraca 8 elementów
+                    var x2 = Arguments.Descendants().Where(n => n.Assessment != null).Where(n => n.Assessment.Decision.Text == "");
+                    //zwraca pustą listę
+                    var x3 = Arguments.Descendants().Where(n => n.Assessment != null).Where(n => n.Assessment.Confidence.Text == "");
+                    //zwraca pustą listę
+
+                    //2) daj dowody (evidence) dla faktów, które są w pełni zaakceptowane
+                    //    dla XML: w ocenie znacznik <decision> ma parametr value mniejszy niż 1
+                    var y = Arguments.Descendants()
+                        .Where(n => n.Assessment is not null && Double.TryParse(n.Assessment.Decision.Value, out _) && Double.Parse(n.Assessment.Decision.Value) < 1)
+                        .Where(n => n is ArgumentationFromXML.Claim && n.Parent is ArgumentationFromXML.Strategy);
                 }
 
 

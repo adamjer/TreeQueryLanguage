@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Magisterka_JsonParsing
 {
+
     namespace ArgumentationFromXML
     {
         public class Header
@@ -23,18 +25,10 @@ namespace Magisterka_JsonParsing
 
         }
 
-        public class Nodes
-        {
-            [JsonProperty("node")]
-            public List<Node> Node { get; set; }
-        }
-
         public abstract class Node
         {
             [JsonProperty("@id")]
             public String ID { get; set; }
-            //[JsonProperty("@type")]
-            //public String Type { get; set; }
             [JsonProperty("name")]
             public String Name { get; set; }
             [JsonProperty("label")]
@@ -42,13 +36,147 @@ namespace Magisterka_JsonParsing
             [JsonProperty("description")]
             public String Description { get; set; }
             [JsonProperty("nodes")]
-            public Nodes Nodes { get; set; }
+            public Nodes Children { get; set; }
+            [JsonProperty("weight")]
+            public String Weight { get; set; }
+            [JsonProperty("assessment")]
+            public Assessment Assessment { get; set; }
+            [JsonProperty("assessmentHistory")]
+            public AssessmentHistory? AssessmentHistory { get; set; }
+            //Strategy
+            [JsonProperty("counterArgumentation")]
+            public String CounterArgumentation { get; set; }
+            //Rationale
+            [JsonProperty("aggregationRule")]
+            public String AggregationRule { get; set; }
 
+            public Node Parent { get; set; }
+
+            public Node()
+            {
+                this.Parent = null;
+                this.ID = null;
+                this.Label = null;
+                this.Name = null;
+                this.Description = null;
+                this.Children = new Nodes();
+            }
+
+            public bool isRoot()
+            {
+                return this.Parent == null;
+            }
+
+            public bool isLeaf()
+            {
+                return this.Children.Count == 0;
+            }
+
+            public IEnumerable<Node> Descendants()
+            {
+                for (int i = 0; i < this.Children.Count; i++)
+                {
+                    yield return this.Children.At(i);
+
+                    var descendants = this.Children.At(i).Descendants();
+                    foreach (var grandChild in descendants)
+                    {
+                        yield return grandChild;
+                    }
+                }
+            }
+
+            public IEnumerable<Node> Ascendants()
+            {
+                var parent = this.Parent;
+                while (parent != null)
+                {
+                    yield return parent;
+                    parent = parent.Parent;
+                }
+            }
+
+            public IEnumerable<Node> Elements()
+            {
+                for (int i = 0; i < this.Children.Count; i++)
+                {
+                    yield return this.Children.At(i);
+                }
+            }
+        }
+
+        public class Nodes
+        {
+            [JsonProperty("node")]
+            private List<Node> _nodes { get; set; }
+            public int Count { get { return _nodes.Count; } }
+
+            public Nodes()
+            {
+                this._nodes = new List<Node>();
+            }
+
+            public Nodes(Node node)
+            {
+                this._nodes = new List<Node>();
+                this._nodes.Add(node);
+            }
+
+            public Nodes(List<Node> nodes)
+            {
+                this._nodes = new List<Node>(nodes.Count);
+                for(int i = 0; i < nodes.Count; i++)
+                {
+                    this._nodes[i] = nodes[i];
+                }
+            }
+
+            public Node At(int index)
+            {
+                try
+                {
+                    return this._nodes.ElementAt(index);
+                }
+                catch (IndexOutOfRangeException e)
+                {
+                    Console.Out.WriteLine(e.Message);
+                }
+
+                throw new Exception("Error: Exception in function At() in class Nodes");
+            }
+
+            public void Add(Node node)
+            {
+                try
+                {
+                    this._nodes.Add(node);
+                    return;
+                }
+                catch (Exception e)
+                {
+                    Console.Out.WriteLine(e.Message);
+                }
+
+                throw new Exception("Error: Exception in function Add() in class Nodes");
+            }
+        }
+
+        public class Root : Node
+        {
+            public Root()
+            {
+                this.Parent = null;
+                this.ID = "root";
+                this.Label = "root";
+                this.Name = "root";
+                this.Description = "root";
+                this.Children = new Nodes();
+            }
         }
 
         public class Information : Node
         {
-            
+
         }
 
         public class Confidence
@@ -96,35 +224,41 @@ namespace Magisterka_JsonParsing
         public class AssessmentHistory
         {
             [JsonProperty("assessment")]
-            public List<Assessment> Assessments { get; set; }
+            private List<Assessment> _assessments { get; set; }
+
+            public Assessment At(int index)
+            {
+                try
+                {
+                    return this._assessments.ElementAt(index);
+                }
+                catch (IndexOutOfRangeException e)
+                {
+                    Console.Out.WriteLine(e.Message);
+                }
+
+                throw new Exception("Error: Exception in function At() in class AssessmentHistory");
+            }
         }
 
         public class Claim : Node
         {
-            public String Weight { get; set; }
-            public Assessment Assessment { get; set; }
-            public AssessmentHistory? AssessmentHistory { get; set; }
+            
         }
 
         public class Strategy : Node
         {
-            public String CounterArgumentation { get; set; }
-            public Assessment Assessment { get; set; }
-            public AssessmentHistory AssessmentHistory { get; set; }
+
         }
 
         public class Rationale : Node
         {
-            public String AggregationRule { get; set; }
-            public Assessment Assessment { get; set; }
-            public AssessmentHistory AssessmentHistory { get; set; }
+
         }
 
         public class Fact : Node
         {
-            public String Weight { get; set; }
-            public Assessment Assessment { get; set; }
-            public AssessmentHistory AssessmentHistory { get; set; }
+
         }
 
         public class Reference : Node
@@ -139,9 +273,7 @@ namespace Magisterka_JsonParsing
 
         public class Assumption : Node
         {
-            public String Weight { get; set; }
-            public Assessment Assessment { get; set; }
-            public AssessmentHistory AssessmentHistory { get; set; }
+
         }
 
         public class AssessmentMethod
@@ -171,7 +303,19 @@ namespace Magisterka_JsonParsing
             [JsonProperty("node")]
             public Node Root { get; set; }
 
+            public void Init()
+            {
+                this.InitParents(this.Root);
+            }
 
+            private void InitParents(Node Parent)
+            {
+                for (int i = 0; i < Parent.Children.Count; i++)
+                {
+                    Parent.Children.At(i).Parent = Parent;
+                    InitParents(Parent.Children.At(i));
+                }
+            }
         }
 
         public class SectionElement
@@ -196,7 +340,21 @@ namespace Magisterka_JsonParsing
         public class Sections
         {
             [JsonProperty("section")]
-            public List<Section> Section { get; set; }
+            private List<Section> Section { get; set; }
+
+            public Section At(int index)
+            {
+                try
+                {
+                    return this.Section.ElementAt(index);
+                }
+                catch (IndexOutOfRangeException e)
+                {
+                    Console.Out.WriteLine(e.Message);
+                }
+
+                throw new Exception("Error: Exception in function At() in class Sections");
+            }
         }
 
         public class Report
