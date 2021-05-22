@@ -80,11 +80,19 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
             }
         }
 
-        public IEnumerable<Node> Elements()
+        public IEnumerable<Node> Supported(Root root)
         {
             for (int i = 0; i < this.Children.Count; i++)
             {
-                yield return this.Children.At(i);
+                var child = this.Children.At(i);
+                if (child is Link)
+                {
+                    yield return root.Descendants().Where(n => n.ID == child.ID).FirstOrDefault();
+                }
+                else
+                {
+                    yield return child;
+                }
             }
         }
     }

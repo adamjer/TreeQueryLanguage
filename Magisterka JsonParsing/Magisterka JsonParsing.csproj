@@ -29,6 +29,12 @@
     <None Update="Argumentations\Device safety - XML report.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Argumentations\Infusion pump air-in-line hazard assurance case.tct">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Argumentations\Infusion pump air-in-line hazard assurance case.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Argumentations\test.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
