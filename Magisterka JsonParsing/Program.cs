@@ -88,8 +88,10 @@ namespace Magisterka_JsonParsing
                     //2) daj dowody (evidence) dla faktów, które są w pełni zaakceptowane
                     //    dla XML: w ocenie znacznik <decision> ma parametr value mniejszy niż 1
                     var y = Arguments.Descendants()
-                        .Where(n => n.Assessment is not null && Double.TryParse(n.Assessment.Decision.Value, out _) && Double.Parse(n.Assessment.Decision.Value) < 1)
-                        .Where(n => n is ArgumentationFromXML.Claim && n.Parent is ArgumentationFromXML.Strategy);
+                        .Where(n => n.Label.ToLower().Contains("evidence"))
+                        .Where(n => n.Parent is ArgumentationFromXML.Fact)
+                        .Where(n => n.Parent.Assessment is not null && Double.TryParse(n.Parent.Assessment.Decision.Value, out _) && Double.Parse(n.Parent.Assessment.Decision.Value) < 1);
+
                 }
 
 
