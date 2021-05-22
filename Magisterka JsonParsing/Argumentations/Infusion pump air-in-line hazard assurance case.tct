@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="utf-8"?>
+<folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0">
+  <name>Assurance case</name>
+  <label>AC</label>
+  <description></description>
+  <server>testjenkins.com</server>
+  <projectList>
+    <project id="20247">
+      <name>Infusion pump air-in-line hazard assurance case</name>
+      <label>IP-AC</label>
+      <description>Assurance case example: air-in-line hazard for infusion pump device.&lt;br /&gt;&lt;br /&gt;Argument developed in NOR-STA for assuance case training&lt;br /&gt;&lt;br /&gt;Argevide&lt;br /&gt;2020</description>
+      <readOnly>false</readOnly>
+      <type>1</type>
+      <labeling>
+        <projectPrefix></projectPrefix>
+        <separator>full</separator>
+        <claimPrefix>G</claimPrefix>
+        <strategyPrefix>S</strategyPrefix>
+        <counterStrategyPrefix></counterStrategyPrefix>
+        <rationalePrefix>J</rationalePrefix>
+        <factPrefix>F</factPrefix>
+        <referencePrefix>Ev</referencePrefix>
+        <assumptionPrefix>A</assumptionPrefix>
+        <informationPrefix></informationPrefix>
+      </labeling>
+      <repositoriesList>
+        <repository id="141">
+          <name>iPUMP-repo - SharePoint</name>
+          <URL>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</URL>
+          <defaultRepo>true</defaultRepo>
+          <readOnly>false</readOnly>
+          <connectionReadOnly>false</connectionReadOnly>
+          <type>3</type>
+        </repository>
+      </repositoriesList>
+      <nodesList>
+        <information id="81290" tid="27b9da4d-fd97-40ce-9b5d-2dcc0cd3f62b">
+          <label manual="false"></label>
+          <name>Infusion hazards are mitigated</name>
+          <tags />
+          <description>&lt;div&gt;
+	The infusion pump case study is based on „Open Patient-Controlled Analgesia Infusion Pump System Requirements” published by SAnToS research group at Kansas State University.
+&lt;/div&gt;
+&lt;div&gt;
+	See &lt;span style="font-weight: bold;"&gt;&lt;span&gt;openpcapump.santoslab.org&lt;/span&gt;&lt;/span&gt; for more details.
+	&lt;br&gt;
+	&lt;br&gt;
+	The case study is limited to one hazard: air in line
+	&lt;br&gt;
+	&lt;br&gt;
+	Hazard analysis is based on FDA publication &amp;quot;Guidance for Industry and FDA Staff - Total Product Life Cycle: Infusion Pump - Premarket Notification [510(k)] Submissions&amp;quot; available at&amp;nbsp;&lt;a href="http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/GuidanceDocuments/ucm206153.htm" target="_blank"&gt;http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/GuidanceDocuments/ucm206153.htm&lt;/a&gt;&amp;nbsp;
+&lt;/div&gt;
+&lt;div&gt;
+	&lt;br&gt;
+&lt;/div&gt;
+</description>
+        </information>
+        <claim id="81291" tid="a833ab6c-0770-4391-8954-a05c2f77cb86">
+          <label manual="false">0</label>
+          <name>Infusion hazards are mitigated</name>
+          <tags />
+          <description>Top claim of the argument
+</description>
+          <parent>81290</parent>
+          <assessmentHistoryEnabled>false</assessmentHistoryEnabled>
+        </claim>
+        <argument id="81292" tid="2596a38a-3185-4e9b-8464-951f05cf66aa">
+          <label manual="false">S0</label>
+          <name>Safety demonstrated by mitigating infusion hazards</name>
+          <tags />
+          <description></description>
+          <parent>81291</parent>
+          <counterArgument>false</counterArgument>
+        </argument>
+        <warrant id="81293" tid="6a1feb42-c02f-4941-b49f-84a5b9332e4c">
+          <label manual="false">J0</label>
+          <name>One hazard identified in this simplified argument</name>
+          <tags />
+          <description>You can find more information on infusion pump hazards in FDA publication &amp;quot;Guidance for Industry and FDA Staff - Total Product Life Cycle: Infusion Pump - Premarket Notification [510(k)] Submissions&amp;quot; available at&amp;nbsp;&lt;a href="http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/GuidanceDocuments/ucm206153.htm" target="_blank"&gt;http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/GuidanceDocuments/ucm206153.htm&lt;/a&gt;
+</description>
+          <parent>81292</parent>
+          <aggregationRule>1</aggregationRule>
+        </warrant>
+        <fact id="81294" tid="fc0dbfd3-52ab-409c-9365-3e4f3c4a9484">
+          <label manual="false">F1</label>
+          <name>Infusion hazards have been identified</name>
+          <tags />
+          <description>Hazard log:
+&lt;br&gt;
+&lt;a href="https://intra.argevide.com/display/DEMO/Hazard+log" target="_blank"&gt;https://intra.argevide.com/display/DEMO/Hazard+log&lt;/a&gt;
+</description>
+          <parent>81292</parent>
+          <maxScore>1</maxScore>
+          <scoreList></scoreList>
+          <weight>5</weight>
+        </fact>
+        <reference id="81295" tid="76a54e0e-cfa6-4ac8-9ffc-63564498fb14">
+          <label manual="false">Ev1</label>
+          <name>Hazard log</name>
+          <tags />
+          <description>System hazard log describes all identified hazards.
+</description>
+          <parent>81294</parent>
+          <url>https://intra.argevide.com/display/DEMO/Hazard+log</url>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <reference id="81296" tid="7544d88c-3555-4efd-94d9-f23beadd2128">
+          <label manual="false">Ev2</label>
+          <name>System Description.docx</name>
+          <tags />
+          <description></description>
+          <parent>81294</parent>
+          <url>/Pump design/System Description.docx?d=w5a15dafef5164815ad613984df2d7f12</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>5a15dafe-f516-4815-ad61-3984df2d7f12</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <claim id="81297" tid="3c7ae16b-593f-46cb-8819-244221bcd0bf">
+          <label manual="false">G1</label>
+          <name>Air in Line hazard (H1) has been mitigated</name>
+          <tags />
+          <description></description>
+          <parent>81292</parent>
+          <weight>5</weight>
+          <assessmentHistoryEnabled>true</assessmentHistoryEnabled>
+        </claim>
+        <information id="81298" tid="3ece9b60-f3be-4f56-8e83-de7191564b1a">
+          <label manual="false"></label>
+          <name>Air in line hazard description</name>
+          <tags />
+          <description>&lt;div&gt;
+	One of the infusion pump hazards is „&lt;span style="font-weight: bold;"&gt;air in line&lt;/span&gt;”.
+&lt;/div&gt;
+&lt;div&gt;
+	The hazard occurs when air bubbles are present in the intravenous line and delivered to the patient bloodstream.
+&lt;/div&gt;
+&lt;div&gt;
+	&lt;br&gt;
+	The hazard is desribed in &lt;a href="http://www.fda.gov/downloads/MedicalDevices/DeviceRegulationandGuidance/GuidanceDocuments/UCM209337.pdf" target="_blank"&gt;FDA document&lt;/a&gt;.
+	&lt;br&gt;
+	&amp;nbsp;
+	&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	Small bubbles in bloodstream can block capillaries in vital organs, most urgently the brain, causing anything from pain and inflammation to neurological damage and paralysis.
+&lt;/div&gt;
+&lt;div&gt;
+	Big bubbles can fill the heart and make it compressing the air instead of pumping the blood.
+&lt;/div&gt;
+&lt;div&gt;
+	It’s estimated that 200–300 cm3 of air in bloodstream would probably kill the patient.
+&lt;/div&gt;
+</description>
+          <parent>81297</parent>
+        </information>
+        <argument id="81299" tid="7c3cb082-858c-4e1f-9ba7-94aba9e79276">
+          <label manual="false">S1.1</label>
+          <name>Argument by referring to hazard controls</name>
+          <tags />
+          <description>Preventive, detective and corrective (reactive) controls have been identified and defined during hazard analysis.</description>
+          <parent>81297</parent>
+          <counterArgument>false</counterArgument>
+        </argument>
+        <warrant id="81300" tid="926d6ef7-f70c-4f27-beab-3b90248c3294">
+          <label manual="false">J1.1</label>
+          <name>Hazard controls have been identified during adequate Hazard Analysis</name>
+          <tags />
+          <description>Preventive, detective and corrective controls have been identified during Hazard Analysis and their adequacy has been justified.&lt;br /&gt;&lt;br /&gt;Adequacy of Hazard Analysis results is demonstrated elsewhere. </description>
+          <parent>81299</parent>
+          <aggregationRule>1</aggregationRule>
+        </warrant>
+        <assumption id="81301" tid="34e267c5-16bf-4c9f-a5fe-99f106e3fcb4">
+          <label manual="true">A1.1</label>
+          <name>Safety analysis of the hazard is complete</name>
+          <tags />
+          <description></description>
+          <parent>81299</parent>
+          <maxScore>1</maxScore>
+          <scoreList></scoreList>
+          <weight>5</weight>
+        </assumption>
+        <claim id="81302" tid="11260802-f45d-4325-b961-9791769b7179">
+          <label manual="false">G1.1</label>
+          <name>Preventive controls for air-in-line hazard are effective</name>
+          <tags />
+          <description></description>
+          <parent>81299</parent>
+          <weight>10</weight>
+          <assessmentHistoryEnabled>false</assessmentHistoryEnabled>
+        </claim>
+        <argument id="81303" tid="d857858e-ba79-470f-a40f-8ce6933985a6">
+          <label manual="false">S1.1.1</label>
+          <name>Argument by demonstrating effectiveness of related medical procedures</name>
+          <tags />
+          <description>&lt;br /&gt;</description>
+          <parent>81302</parent>
+          <counterArgument>false</counterArgument>
+        </argument>
+        <warrant id="81304" tid="4ce370ee-fd8a-4064-a88d-8a362a539e59">
+          <label manual="false">J1.1.1</label>
+          <name>The related medical procedures are listed in the "Clinician manual". If performed by a trained clinician, they are effective</name>
+          <tags />
+          <description>&lt;br /&gt;</description>
+          <parent>81303</parent>
+          <aggregationRule>1</aggregationRule>
+        </warrant>
+        <claim id="81305" tid="683ba5e5-279e-4686-b1e8-016cea86380c">
+          <label manual="false">G1.2</label>
+          <name>Air in line detection by downstream sensor is effective</name>
+          <tags />
+          <description></description>
+          <parent>81303</parent>
+          <weight>0</weight>
+          <assessmentHistoryEnabled>false</assessmentHistoryEnabled>
+        </claim>
+        <argument id="81306" tid="668f9f7e-53c8-4ccb-9317-b9f92eba8960">
+          <label manual="false">S1.2.1</label>
+          <name>Arguement by refering to the related safety requirement and its implementation</name>
+          <tags />
+          <description></description>
+          <parent>81305</parent>
+          <counterArgument>false</counterArgument>
+        </argument>
+        <warrant id="81307" tid="9127cf87-eaee-424a-bee1-86399090cb89">
+          <label manual="false">J1.2.1</label>
+          <name>Detective controls decomposition</name>
+          <tags />
+          <description></description>
+          <parent>81306</parent>
+          <aggregationRule>1</aggregationRule>
+        </warrant>
+        <fact id="81308" tid="ea9a0ca8-db6d-4287-a1cf-cc8ad5188893">
+          <label manual="false">F1.2.1</label>
+          <name>Requirement specified: Downstream sensor detects air in line</name>
+          <tags />
+          <description>Requirement specified: Downstream sensor detects air in line
+</description>
+          <parent>81306</parent>
+          <maxScore>1</maxScore>
+          <scoreList></scoreList>
+          <weight>5</weight>
+        </fact>
+        <reference id="81309" tid="9f8d0787-7b0e-4ead-8182-05e4a1e33bb0">
+          <label manual="false">Ev1.2.1</label>
+          <name>Safety Requirements.pdf</name>
+          <tags />
+          <description></description>
+          <parent>81308</parent>
+          <url>/Safety analysis/Safety Requirements.pdf</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>4844986d-7791-49b3-8c06-53c39a50f2c3</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <reference id="81310" tid="3f2654ba-83c3-4609-b465-d57c7b6ab1ba">
+          <label manual="true">Ev1.2.4</label>
+          <name>Safety Requirements.docx</name>
+          <tags />
+          <description></description>
+          <parent>81308</parent>
+          <url>/Safety analysis/Safety Requirements.docx?d=w137a90f53b624214b105c6321f9dfbc3</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>137a90f5-3b62-4214-b105-c6321f9dfbc3</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <fact id="81311" tid="ac7daa49-5236-41ef-8595-200e98489509">
+          <label manual="false">F1.2.2</label>
+          <name>Test demonstrate the requirement is satisfied</name>
+          <tags />
+          <description>Test demonstrate the requirement is satisfied
+</description>
+          <parent>81306</parent>
+          <maxScore>1</maxScore>
+          <scoreList></scoreList>
+          <weight>5</weight>
+        </fact>
+        <reference id="81312" tid="ccb1d88a-c5b2-4b32-95ae-297f649392ba">
+          <label manual="false">Ev1.2.2</label>
+          <name>Downstream Monitor Test Report.pdf</name>
+          <tags />
+          <description></description>
+          <parent>81311</parent>
+          <url>/V&amp;V/Downstream Monitor Test Report.pdf</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>a15ff212-a1db-4138-957c-8b6d4985dc2d</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <reference id="81313" tid="bbc792ea-d37b-4be9-9abe-d9e814899c6e">
+          <label manual="false">Ev1.2.3</label>
+          <name>Jira report: downstream monitor failure</name>
+          <tags />
+          <description></description>
+          <parent>81311</parent>
+          <url>https://jira.argevide.com/browse/DEMO-1</url>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <information id="81314" tid="50fa8234-e822-4132-9cd4-13ccec947e22">
+          <label manual="false"></label>
+          <name>Downstream Monitor design docummentation</name>
+          <tags />
+          <description></description>
+          <parent>81305</parent>
+        </information>
+        <assumption id="81315" tid="bf7520ec-98d3-4126-b4eb-7fdb72f88187">
+          <label manual="false">A1.1.1</label>
+          <name>Infusion procedures are performed by properly trained personel</name>
+          <tags />
+          <description>Demonstrating qualifications of the personel is out of the scope of this assurance case</description>
+          <parent>81303</parent>
+          <maxScore>1</maxScore>
+        </assumption>
+        <fact id="81316" tid="ffc420df-8ee3-4d39-86c2-1a2d6f26f939">
+          <label manual="false">F1.1.1</label>
+          <name>Clinician manual and training ensures compatible infusion set</name>
+          <tags />
+          <description>&lt;span style="font-weight: bold;"&gt;Description&lt;/span&gt;
+&lt;br&gt;
+Clinician manual and training ensures compatible infusion set
+&lt;br&gt;
+Clinician manual and training ensures compatible infusion set
+&lt;br&gt;
+Clinician manual and training ensures compatible infusion set
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="font-weight: bold;"&gt;Assessment criteria &lt;/span&gt;
+&lt;br&gt;
+Clinician manual and training ensures compatible infusion set
+&lt;br&gt;
+Clinician manual and training ensures compatible infusion set
+</description>
+          <parent>81303</parent>
+          <maxScore>1</maxScore>
+          <scoreList></scoreList>
+          <weight>5</weight>
+        </fact>
+        <reference id="81317" tid="04a1e4f7-103b-47bc-b5d9-df8e58c0578f">
+          <label manual="false">Ev1.1.1</label>
+          <name>Clinician manual.pdf</name>
+          <tags />
+          <description>&lt;br&gt;
+Section 1 and 2.
+</description>
+          <parent>81316</parent>
+          <url>/Manuals/Clinician manual.pdf#page=3</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>1470c278-4e0b-4eac-a5a0-b54e5d473941</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <reference id="81318" tid="0fa347e5-8a0e-423f-bf7f-d92b14707ac6">
+          <label manual="false">Ev1.1.2</label>
+          <name>System Description.docx</name>
+          <tags />
+          <description></description>
+          <parent>81316</parent>
+          <url>/Pump design/System Description.docx?d=w5a15dafef5164815ad613984df2d7f12</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>5a15dafe-f516-4815-ad61-3984df2d7f12</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <fact id="81319" tid="785af761-8936-4ebd-8ea9-f9aab5d0b53a">
+          <label manual="false">F1.1.2</label>
+          <name>Clinician manual and training ensures priming the line before use</name>
+          <tags />
+          <description>&lt;span style="font-weight: bold;"&gt;Description&lt;/span&gt;
+&lt;br&gt;
+Clinician manual and training ensures priming the line before use
+&lt;br&gt;
+Clinician manual and training ensures priming the line before use
+&lt;br&gt;
+Clinician manual and training ensures priming the line before use
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style="font-weight: bold;"&gt;Assessment criteria
+&lt;br&gt;
+&lt;/span&gt;Clinician manual and training ensures priming the line before use
+&lt;br&gt;
+Clinician manual and training ensures priming the line before use
+&lt;br&gt;
+Clinician manual and training ensures priming the line before use&lt;span style="font-weight: bold;"&gt;
+&lt;br&gt;
+&lt;/span&gt;
+</description>
+          <parent>81303</parent>
+          <maxScore>1</maxScore>
+          <scoreList></scoreList>
+          <weight>5</weight>
+        </fact>
+        <reference id="81320" tid="0dc472b2-2986-4856-b807-436a449bf956">
+          <label manual="false">Ev1.1.3</label>
+          <name>Clinician manual.pdf</name>
+          <tags />
+          <description></description>
+          <parent>81319</parent>
+          <url>/Manuals/Clinician manual.pdf#page=3</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>1470c278-4e0b-4eac-a5a0-b54e5d473941</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <fact id="81321" tid="8fdb8b5a-0d6c-44f7-8252-7c94f519b208">
+          <label manual="false">F1.1.3</label>
+          <name>Clinician manual and training ensures sealed delivery path</name>
+          <tags />
+          <description>&lt;div&gt;The clinician authenticates themselves, the patient, and the liquid pain-killer received from the hospital pharmacy, loads the drug, attaches a flexible tube leading to a needle, primes the tube and needle to remove air, and inserts the needle into the patient.&lt;br /&gt; &lt;/div&gt;&lt;div&gt;It's the clinician duty to expel air from tube and needle before treatment.&lt;/div&gt;</description>
+          <parent>81303</parent>
+          <maxScore>1</maxScore>
+        </fact>
+        <link id="81322" tid="18bf40ed-0c70-4839-ba83-df4839dba484">
+          <label manual="false">Ev1.1.4</label>
+          <name></name>
+          <tags />
+          <description></description>
+          <parent>81321</parent>
+          <url>/Manuals/Clinician manual.pdf#page=3</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>1470c278-4e0b-4eac-a5a0-b54e5d473941</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+          <linkTarget>81320</linkTarget>
+        </link>
+        <claim id="81323" tid="df6ea886-3052-4d9e-a751-6656e9f7d695">
+          <label manual="false">G1.3</label>
+          <name>Corrective controls are effective</name>
+          <tags />
+          <description>&lt;br /&gt;</description>
+          <parent>81299</parent>
+          <assessmentHistoryEnabled>false</assessmentHistoryEnabled>
+        </claim>
+        <argument id="81324" tid="944f5fa0-434d-4cc4-8320-0dc7effd9531">
+          <label manual="false">S1.3.1</label>
+          <name>Argument by referring to corrective controls</name>
+          <tags />
+          <description>&lt;br /&gt;</description>
+          <parent>81323</parent>
+          <counterArgument>false</counterArgument>
+        </argument>
+        <warrant id="81325" tid="0fafd94e-e29e-44be-b8b4-63a0bba7e723">
+          <label manual="false">J1.3.1</label>
+          <name>Corrective controls have been identified during adequate Hazard Analysis</name>
+          <tags />
+          <description>&lt;br /&gt;</description>
+          <parent>81324</parent>
+          <aggregationRule>1</aggregationRule>
+        </warrant>
+        <claim id="81326" tid="66c15e2a-68ac-4ab5-b718-e3bb62547531">
+          <label manual="false">G1.3.1</label>
+          <name>Pump halts when air in line is detected</name>
+          <tags />
+          <description></description>
+          <parent>81324</parent>
+          <weight>5</weight>
+          <assessmentHistoryEnabled>false</assessmentHistoryEnabled>
+        </claim>
+        <argument id="81327" tid="f8bb03bc-74cc-41ad-9f6b-a4d9be00b520">
+          <label manual="false">S1.3.1.1</label>
+          <name>Argument by refering to the related safety requirement and its implementation</name>
+          <tags />
+          <description></description>
+          <parent>81326</parent>
+          <counterArgument>false</counterArgument>
+        </argument>
+        <warrant id="81328" tid="87d74556-1d9b-498d-8015-83b9e46628e6">
+          <label manual="false">J1.3.1.1</label>
+          <name>If the corresponding safety requirement has been defined and reliably implemented the pump will stop</name>
+          <tags />
+          <description></description>
+          <parent>81327</parent>
+          <aggregationRule>1</aggregationRule>
+        </warrant>
+        <fact id="81329" tid="86d4cf6e-a848-49f7-abcb-a6c4c0c1bae5">
+          <label manual="false">F1.3.1.1</label>
+          <name>Safety requirement RS.5 to stop the pump is defined</name>
+          <tags />
+          <description>Table 4 for requirement 5.4.1.2 specifies that pump rate for air-in-line alarm should be &amp;quot;off&amp;quot;.
+</description>
+          <parent>81327</parent>
+          <maxScore>1</maxScore>
+          <scoreList></scoreList>
+          <weight>5</weight>
+        </fact>
+        <reference id="81330" tid="c52e1393-64d9-4482-83c1-07a4916fab0d">
+          <label manual="false">Ev1.3.1.1</label>
+          <name>Safety Requirements.pdf</name>
+          <tags />
+          <description></description>
+          <parent>81329</parent>
+          <url>/Safety analysis/Safety Requirements.pdf#page=2</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>4844986d-7791-49b3-8c06-53c39a50f2c3</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <fact id="81331" tid="6f5ea241-ec26-4f25-92c4-0d1bc4cc044c">
+          <label manual="false">F1.3.1.2</label>
+          <name>Safety requirement  5.4.1.2 verified in test process</name>
+          <tags />
+          <description></description>
+          <parent>81327</parent>
+          <maxScore>1</maxScore>
+        </fact>
+        <reference id="81332" tid="e86a0ebb-9eda-438c-9ffe-d0fcc4abf2fc">
+          <label manual="false">Ev1.3.1.2</label>
+          <name>Software Test Report.pdf</name>
+          <tags />
+          <description></description>
+          <parent>81331</parent>
+          <url>/V&amp;V/Software Test Report.pdf</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>e0ad1d6c-e8de-4579-8102-e1291a2f976a</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <assumption id="81333" tid="093566e5-4f82-45b2-a428-ab011052f361">
+          <label manual="true">A1.3.1.1</label>
+          <name>Testing process is reliable</name>
+          <tags />
+          <description></description>
+          <parent>81327</parent>
+          <maxScore>1</maxScore>
+          <scoreList></scoreList>
+          <weight>5</weight>
+        </assumption>
+        <claim id="81334" tid="cc8c4cd9-8a9e-4ae0-8b55-c45c560119e1">
+          <label manual="false">G1.3.2</label>
+          <name>Alarm sounded and displayed when air in line detected</name>
+          <tags />
+          <description></description>
+          <parent>81324</parent>
+          <assessmentHistoryEnabled>false</assessmentHistoryEnabled>
+        </claim>
+        <argument id="81335" tid="6b4208ae-0bb5-4b6f-8355-39cbc0478bca">
+          <label manual="false">S1.3.2.1</label>
+          <name>Arguement by refering to the related safety requirement and its implementation</name>
+          <tags />
+          <description></description>
+          <parent>81334</parent>
+          <counterArgument>false</counterArgument>
+        </argument>
+        <warrant id="81336" tid="edfed77a-34c6-4927-a4ef-3bdcc73f3c1c">
+          <label manual="false">J1.3.2.1</label>
+          <name>If the corresponding safety requirement has been defined and reliably implemented the alarm will sound</name>
+          <tags />
+          <description></description>
+          <parent>81335</parent>
+          <aggregationRule>1</aggregationRule>
+        </warrant>
+        <fact id="81337" tid="9cd39fad-c059-412e-979d-21f78caa47d2">
+          <label manual="false">F1.3.2.1</label>
+          <name>Safety requirement for air-in-line alarm is defined</name>
+          <tags />
+          <description>Requirement 5.1.4:&lt;br /&gt;&lt;div&gt;The PCA pump shall detect air-in-line embolism (bubble). (EC12 3.2.12)&lt;/div&gt; &lt;br /&gt;Air-in-line alarm in section 3.2.12 Exception Case: Air-in-line Embolism (EC12)&lt;br /&gt; </description>
+          <parent>81335</parent>
+          <maxScore>1</maxScore>
+        </fact>
+        <link id="81338" tid="81488dcc-6d0e-4da7-94d8-1a2cfd05825a">
+          <label manual="false">Ev1.3.2.1</label>
+          <name></name>
+          <tags />
+          <description></description>
+          <parent>81337</parent>
+          <url>ICE-PCArequirements.pdf#page=43</url>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <maxValidityPeriod>0</maxValidityPeriod>
+          <linkTarget>81348</linkTarget>
+        </link>
+        <link id="81339" tid="aaacc2d4-cd79-4db5-87fd-d02a7674c890">
+          <label manual="true">Ev999</label>
+          <name></name>
+          <tags />
+          <description></description>
+          <parent>81337</parent>
+          <url>/Safety analysis/Safety Requirements.docx?d=w137a90f53b624214b105c6321f9dfbc3</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>137a90f5-3b62-4214-b105-c6321f9dfbc3</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+          <linkTarget>81310</linkTarget>
+        </link>
+        <fact id="81340" tid="c49c0076-3bb7-42c7-8538-9735a285806e">
+          <label manual="false">F1.3.2.2</label>
+          <name>Safety requirement  EC12 step 2 verified in the test process</name>
+          <tags />
+          <description></description>
+          <parent>81335</parent>
+          <maxScore>1</maxScore>
+        </fact>
+        <link id="81341" tid="3de23a8b-a2b5-41bd-a61f-06e761b745e0">
+          <label manual="false">Ev1.3.2.2</label>
+          <name></name>
+          <tags />
+          <description></description>
+          <parent>81340</parent>
+          <linkTarget>81355</linkTarget>
+        </link>
+        <link id="81342" tid="f72aefce-e832-4642-83c4-6901b9ac9eb9">
+          <label manual="false"></label>
+          <name></name>
+          <tags />
+          <description></description>
+          <parent>81340</parent>
+          <url>/Manuals/Clinician manual.pdf#page=2</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>1470c278-4e0b-4eac-a5a0-b54e5d473941</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+          <linkTarget>81317</linkTarget>
+        </link>
+        <fact id="81343" tid="867b582f-def0-4e3b-a7dc-e0cad56689b0">
+          <label manual="false">F1.3.1</label>
+          <name>Air in line event recorded in system log</name>
+          <tags />
+          <description></description>
+          <parent>81324</parent>
+          <maxScore>1</maxScore>
+        </fact>
+        <reference id="81344" tid="62b775f6-2998-4af8-8681-a913e45f56de">
+          <label manual="false">Ev1.3.1</label>
+          <name>System log review</name>
+          <tags />
+          <description></description>
+          <parent>81343</parent>
+          <url />
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName></fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <information id="81345" tid="e3dc9e1c-1868-4b7e-8eb1-815392a03c83">
+          <label manual="false"></label>
+          <name>Evidence directory</name>
+          <tags />
+          <description></description>
+          <parent>81290</parent>
+        </information>
+        <information id="81346" tid="614db0a7-ca1d-4310-ab74-6f194a7a4cea">
+          <label manual="false"></label>
+          <name>Safety requirements</name>
+          <tags />
+          <description></description>
+          <parent>81345</parent>
+        </information>
+        <reference id="81347" tid="209f3024-ea15-440f-bab5-3ad0600b766d">
+          <label manual="false">Ev3</label>
+          <name>Safety Requirements.pdf</name>
+          <tags />
+          <description></description>
+          <parent>81346</parent>
+          <url>/Safety analysis/Safety Requirements.pdf</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>4844986d-7791-49b3-8c06-53c39a50f2c3</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <reference id="81348" tid="fa2bfd5b-e9e2-4573-a7e2-e6f5f1e7dbf7">
+          <label manual="false">Ev4</label>
+          <name>Definition of safety requirement to sound alarm</name>
+          <tags />
+          <description></description>
+          <parent>81346</parent>
+          <url>ICE-PCArequirements.pdf#page=43</url>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <information id="81349" tid="f32bdb31-fe12-46e8-af9b-41efe00040df">
+          <label manual="false"></label>
+          <name>Clinician Manual</name>
+          <tags />
+          <description></description>
+          <parent>81345</parent>
+        </information>
+        <reference id="81350" tid="12026779-dfb0-4200-87f3-0ca288e9301b">
+          <label manual="false">Ev5</label>
+          <name>Clinician manual, section on infusion equipment</name>
+          <tags />
+          <description>&lt;br /&gt;</description>
+          <parent>81349</parent>
+          <url>/Manuals/Ev11 Clinician manual.pdf</url>
+          <repository>141</repository>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <fileName>1470c278-4e0b-4eac-a5a0-b54e5d473941</fileName>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <reference id="81351" tid="c793ae3a-e1ea-46d4-80af-13fa70433e8d">
+          <label manual="false">Ev6</label>
+          <name>Clinician manual, section on infusion preparation</name>
+          <tags />
+          <description></description>
+          <parent>81349</parent>
+          <url>Clinician manual.pdf#page=3</url>
+          <evidenceAutoUpdate>false</evidenceAutoUpdate>
+          <maxValidityPeriod>0</maxValidityPeriod>
+        </reference>
+        <information id="81352" tid="45b544e3-745e-4b4a-b247-2a0523612abc">
+          <label manual="false"></label>
+          <name>Technical specifications</name>
+          <tags />
+          <description></description>
+          <parent>81345</parent>
+        </information>
+        <reference id="81353" tid="267cf667-333b-4031-a96b-56d6b5532b89">
+          <label manual="false">Ev7</label>
+          <name>Sensor technical specification</name>
+          <tags />
+          <description></description>
+          <parent>81352</parent>
+          <url />
+        </reference>
+        <information id="81354" tid="cff0c5f6-32cb-4802-80f8-bd01de4217e1">
+          <label manual="false"></label>
+          <name>Test reports</name>
+          <tags />
+          <description></description>
+          <parent>81345</parent>
+        </information>
+        <reference id="81355" tid="4fa2a5d9-6def-47f2-8ac7-3ba7680af022">
+          <label manual="false">Ev8</label>
+          <name>Software Test Report</name>
+          <tags />
+          <description></description>
+          <parent>81354</parent>
+          <url />
+        </reference>
+        <reference id="81356" tid="21f132f0-c249-4211-8cd6-11c93656e18c">
+          <label manual="false">Ev9</label>
+          <name>Downstream Monitor Test Report</name>
+          <tags />
+          <description></description>
+          <parent>81354</parent>
+          <url />
+        </reference>
+      </nodesList>
+      <evaluation>
+        <evalMethod keyName="D-S_METHOD" />
+        <arbitrationMethod methodId="2" />
+        <nodeEvaluationsList>
+          <nodeEvaluation id="33711">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81311</nodeId>
+            <ass>0.4</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2021-02-23T08:53:25</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33712">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81331</nodeId>
+            <ass>1</ass>
+            <tr>0</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2021-01-21T10:22:59</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33713">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81308</nodeId>
+            <ass>1</ass>
+            <tr>0</tr>
+            <note>Some info is missing
+</note>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2021-01-21T10:22:40</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33714">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81321</nodeId>
+            <ass>1</ass>
+            <tr>1</tr>
+            <note>&lt;span style="font-size: x-small;"&gt;&lt;span style="background-color: rgb(171, 214, 255);"&gt;Test cover all operation modes. Test results positive and verified.&lt;/span&gt;&lt;/span&gt;
+</note>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2021-01-21T10:20:54</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33715">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81329</nodeId>
+            <ass>1</ass>
+            <tr>0.6666667</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-06-10T15:15:42</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33716">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81315</nodeId>
+            <ass>0.8</ass>
+            <tr>0.6666667</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-06-10T13:37:08</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33717">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81319</nodeId>
+            <ass>1</ass>
+            <tr>0.6666667</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-06-10T13:36:59</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33718">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81316</nodeId>
+            <ass>0.6</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-06-10T13:36:47</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33719">
+            <userId>10000109</userId>
+            <userName>System Administrator</userName>
+            <nodeId>81300</nodeId>
+            <ass>0.8</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-13T11:21:08</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33720">
+            <userId>10000109</userId>
+            <userName>System Administrator</userName>
+            <nodeId>81340</nodeId>
+            <ass>0.8</ass>
+            <tr>1</tr>
+            <note>Test was incomplete. Two operation modes were out of the test scope.
+</note>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-13T11:20:51</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33721">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81343</nodeId>
+            <ass>0.6</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-11T13:43:49</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33722">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81294</nodeId>
+            <ass>0.6</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-10T14:01:17</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33723">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81293</nodeId>
+            <ass>1</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-09T22:15:45</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33728">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81304</nodeId>
+            <ass>1</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-09T22:15:45</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33727">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81307</nodeId>
+            <ass>1</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-09T22:15:45</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33725">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81325</nodeId>
+            <ass>1</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-09T22:15:45</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33726">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81328</nodeId>
+            <ass>1</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-09T22:15:45</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33724">
+            <userId>10000108</userId>
+            <userName>Senior Demon</userName>
+            <nodeId>81336</nodeId>
+            <ass>1</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2020-05-09T22:15:45</ts>
+          </nodeEvaluation>
+          <nodeEvaluation id="33729">
+            <userId>10000110</userId>
+            <userName>Janusz Gorski</userName>
+            <nodeId>81337</nodeId>
+            <ass>1</ass>
+            <tr>1</tr>
+            <excluded>false</excluded>
+            <deleted>false</deleted>
+            <ts>2014-10-24T08:54:57</ts>
+          </nodeEvaluation>
+        </nodeEvaluationsList>
+      </evaluation>
+      <verification />
+      <interfaces />
+    </project>
+  </projectList>
+</folder>

@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<report>
+  <header>
+    <userName>Edward Demonstrator</userName>
+    <timestamp>2021-05-22T06:30:31</timestamp>
+    <generator>testjenkins.com</generator>
+    <locale>en</locale>
+  </header>
+  <project id="20247">
+    <name>Infusion pump air-in-line hazard assurance case</name>
+    <symbol>IP-AC</symbol>
+    <folder>Assurance case</folder>
+    <path>AWARD / DEMO / AC</path>
+    <assessmentMethod type="D-S">Dempster-Shafer</assessmentMethod>
+    <description>Assurance case example: air-in-line hazard for infusion pump device.&lt;br /&gt;&lt;br /&gt;Argument developed in NOR-STA for assuance case training&lt;br /&gt;&lt;br /&gt;Argevide&lt;br /&gt;2020</description>
+    <node id="81290" type="information">
+      <name>Infusion hazards are mitigated</name>
+      <label></label>
+      <description>The infusion pump case study is based on „Open Patient-Controlled Analgesia Infusion Pump System Requirements” published by SAnToS research group at Kansas State University. 
+See openpcapump.santoslab.org for more details. 
+
+The case study is limited to one hazard: air in line 
+
+Hazard analysis is based on FDA publication "Guidance for Industry and FDA Staff - Total Product Life Cycle: Infusion Pump - Premarket Notification [510(k)] Submissions" available at http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/GuidanceDocuments/ucm206153.htm  
+</description>
+      <nodes>
+        <node id="81291" type="claim">
+          <name>Infusion hazards are mitigated</name>
+          <label>0</label>
+          <description>Top claim of the argument </description>
+          <assessment>
+            <confidence degree="3" maxDegree="5" value="0.5767244">with high confidence</confidence>
+            <decision degree="2" maxDegree="3" value="0.6613667">tolerable</decision>
+            <comment></comment>
+            <excluded>false</excluded>
+          </assessment>
+          <nodes>
+            <node id="81292" type="strategy">
+              <name>Safety demonstrated by mitigating infusion hazards</name>
+              <label>S0</label>
+              <description></description>
+              <counterArgumentation>false</counterArgumentation>
+              <assessment>
+                <confidence degree="3" maxDegree="5" value="0.5767244">with high confidence</confidence>
+                <decision degree="2" maxDegree="3" value="0.6613667">tolerable</decision>
+                <comment></comment>
+                <excluded>false</excluded>
+              </assessment>
+              <nodes>
+                <node id="81293" type="rationale">
+                  <name>One hazard identified in this simplified argument</name>
+                  <label>J0</label>
+                  <description>You can find more information on infusion pump hazards in FDA publication "Guidance for Industry and FDA Staff - Total Product Life Cycle: Infusion Pump - Premarket Notification [510(k)] Submissions" available at http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/GuidanceDocuments/ucm206153.htm </description>
+                  <aggregationRule>Complementary (C-rule)</aggregationRule>
+                  <assessment>
+                    <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                    <comment></comment>
+                    <excluded>false</excluded>
+                    <userName>Senior Demon</userName>
+                    <timestamp>2020-05-09T22:15:45</timestamp>
+                  </assessment>
+                  <assessmentHistory>
+                    <assessment isChange="yes">
+                      <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                      <comment></comment>
+                      <excluded>false</excluded>
+                      <userName>Senior Demon</userName>
+                      <timestamp>2020-05-09T22:15:45</timestamp>
+                    </assessment>
+                  </assessmentHistory>
+                </node>
+                <node id="81294" type="fact">
+                  <name>Infusion hazards have been identified</name>
+                  <label>F1</label>
+                  <description>Hazard log: 
+https://intra.argevide.com/display/DEMO/Hazard+log </description>
+                  <weight>5</weight>
+                  <assessment>
+                    <confidence degree="3" maxDegree="5" value="0.6">with high confidence</confidence>
+                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                    <comment></comment>
+                    <excluded>false</excluded>
+                    <userName>Senior Demon</userName>
+                    <timestamp>2020-05-10T14:01:17</timestamp>
+                  </assessment>
+                  <assessmentHistory>
+                    <assessment isChange="yes">
+                      <confidence degree="3" maxDegree="5" value="0.6">with high confidence</confidence>
+                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                      <comment></comment>
+                      <excluded>false</excluded>
+                      <userName>Senior Demon</userName>
+                      <timestamp>2020-05-10T14:01:17</timestamp>
+                    </assessment>
+                  </assessmentHistory>
+                  <nodes>
+                    <node id="81295" type="reference">
+                      <name>Hazard log</name>
+                      <label>Ev1</label>
+                      <description>System hazard log describes all identified hazards. </description>
+                      <repositoryName />
+                      <repository />
+                      <address>https://intra.argevide.com/display/DEMO/Hazard+log</address>
+                      <autoUpdate>false</autoUpdate>
+                      <validityDate />
+                      <maxValidityPeriod />
+                    </node>
+                    <node id="81296" type="reference">
+                      <name>System Description.docx</name>
+                      <label>Ev2</label>
+                      <description></description>
+                      <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                      <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                      <address>/Pump design/System Description.docx?d=w5a15dafef5164815ad613984df2d7f12</address>
+                      <autoUpdate>false</autoUpdate>
+                      <validityDate />
+                      <maxValidityPeriod />
+                    </node>
+                  </nodes>
+                </node>
+                <node id="81297" type="claim">
+                  <name>Air in Line hazard (H1) has been mitigated</name>
+                  <label>G1</label>
+                  <description></description>
+                  <weight>5</weight>
+                  <assessment>
+                    <confidence degree="3" maxDegree="5" value="0.5534487">with high confidence</confidence>
+                    <decision degree="2" maxDegree="3" value="0.6488616">tolerable</decision>
+                    <comment></comment>
+                    <excluded>false</excluded>
+                  </assessment>
+                  <nodes>
+                    <node id="81298" type="information">
+                      <name>Air in line hazard description</name>
+                      <label></label>
+                      <description>One of the infusion pump hazards is „air in line”. 
+The hazard occurs when air bubbles are present in the intravenous line and delivered to the patient bloodstream. 
+
+The hazard is desribed in FDA document. 
+  
+Small bubbles in bloodstream can block capillaries in vital organs, most urgently the brain, causing anything from pain and inflammation to neurological damage and paralysis. 
+Big bubbles can fill the heart and make it compressing the air instead of pumping the blood. 
+It’s estimated that 200–300 cm3 of air in bloodstream would probably kill the patient. </description>
+                    </node>
+                    <node id="81299" type="strategy">
+                      <name>Argument by referring to hazard controls</name>
+                      <label>S1.1</label>
+                      <description>Preventive, detective and corrective (reactive) controls have been identified and defined during hazard analysis.</description>
+                      <counterArgumentation>false</counterArgumentation>
+                      <assessment>
+                        <confidence degree="3" maxDegree="5" value="0.5534487">with high confidence</confidence>
+                        <decision degree="2" maxDegree="3" value="0.6488616">tolerable</decision>
+                        <comment></comment>
+                        <excluded>false</excluded>
+                      </assessment>
+                      <nodes>
+                        <node id="81300" type="rationale">
+                          <name>Hazard controls have been identified during adequate Hazard Analysis</name>
+                          <label>J1.1</label>
+                          <description>Preventive, detective and corrective controls have been identified during Hazard Analysis and their adequacy has been justified.
+
+Adequacy of Hazard Analysis results is demonstrated elsewhere. </description>
+                          <aggregationRule>Complementary (C-rule)</aggregationRule>
+                          <assessment>
+                            <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                            <comment></comment>
+                            <excluded>false</excluded>
+                            <userName>System Administrator</userName>
+                            <timestamp>2020-05-13T11:21:08</timestamp>
+                          </assessment>
+                          <assessmentHistory>
+                            <assessment isChange="yes">
+                              <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                              <comment></comment>
+                              <excluded>false</excluded>
+                              <userName>System Administrator</userName>
+                              <timestamp>2020-05-13T11:21:08</timestamp>
+                            </assessment>
+                          </assessmentHistory>
+                        </node>
+                        <node id="81301" type="assumption">
+                          <name>Safety analysis of the hazard is complete</name>
+                          <label>A1.1</label>
+                          <description></description>
+                          <weight>5</weight>
+                          <assessment>
+                            <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                            <decision degree="" maxDegree="3" value="">no assessment</decision>
+                            <comment></comment>
+                            <excluded>false</excluded>
+                          </assessment>
+                        </node>
+                        <node id="81302" type="claim">
+                          <name>Preventive controls for air-in-line hazard are effective</name>
+                          <label>G1.1</label>
+                          <description></description>
+                          <weight>10</weight>
+                          <assessment>
+                            <confidence degree="4" maxDegree="5" value="0.7777778">with very high confidence</confidence>
+                            <decision degree="2" maxDegree="3" value="0.8252681">tolerable</decision>
+                            <comment></comment>
+                            <excluded>false</excluded>
+                          </assessment>
+                          <nodes>
+                            <node id="81303" type="strategy">
+                              <name>Argument by demonstrating effectiveness of related medical procedures</name>
+                              <label>S1.1.1</label>
+                              <description></description>
+                              <counterArgumentation>false</counterArgumentation>
+                              <assessment>
+                                <confidence degree="4" maxDegree="5" value="0.7777778">with very high confidence</confidence>
+                                <decision degree="2" maxDegree="3" value="0.8252681">tolerable</decision>
+                                <comment></comment>
+                                <excluded>false</excluded>
+                              </assessment>
+                              <nodes>
+                                <node id="81304" type="rationale">
+                                  <name>The related medical procedures are listed in the "Clinician manual". If performed by a trained clinician, they are effective</name>
+                                  <label>J1.1.1</label>
+                                  <description></description>
+                                  <aggregationRule>Complementary (C-rule)</aggregationRule>
+                                  <assessment>
+                                    <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                    <userName>Senior Demon</userName>
+                                    <timestamp>2020-05-09T22:15:45</timestamp>
+                                  </assessment>
+                                  <assessmentHistory>
+                                    <assessment isChange="yes">
+                                      <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                      <comment></comment>
+                                      <excluded>false</excluded>
+                                      <userName>Senior Demon</userName>
+                                      <timestamp>2020-05-09T22:15:45</timestamp>
+                                    </assessment>
+                                  </assessmentHistory>
+                                </node>
+                                <node id="81305" type="claim">
+                                  <name>Air in line detection by downstream sensor is effective</name>
+                                  <label>G1.2</label>
+                                  <description></description>
+                                  <weight>0</weight>
+                                  <assessment>
+                                    <confidence degree="3" maxDegree="5" value="0.538983">with high confidence</confidence>
+                                    <decision degree="0" maxDegree="3" value="0.1588983">rejectable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                  </assessment>
+                                  <nodes>
+                                    <node id="81306" type="strategy">
+                                      <name>Arguement by refering to the related safety requirement and its implementation</name>
+                                      <label>S1.2.1</label>
+                                      <description></description>
+                                      <counterArgumentation>false</counterArgumentation>
+                                      <assessment>
+                                        <confidence degree="3" maxDegree="5" value="0.538983">with high confidence</confidence>
+                                        <decision degree="0" maxDegree="3" value="0.1588983">rejectable</decision>
+                                        <comment></comment>
+                                        <excluded>false</excluded>
+                                      </assessment>
+                                      <nodes>
+                                        <node id="81307" type="rationale">
+                                          <name>Detective controls decomposition</name>
+                                          <label>J1.2.1</label>
+                                          <description></description>
+                                          <aggregationRule>Complementary (C-rule)</aggregationRule>
+                                          <assessment>
+                                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                            <comment></comment>
+                                            <excluded>false</excluded>
+                                            <userName>Senior Demon</userName>
+                                            <timestamp>2020-05-09T22:15:45</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                              <comment></comment>
+                                              <excluded>false</excluded>
+                                              <userName>Senior Demon</userName>
+                                              <timestamp>2020-05-09T22:15:45</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                        </node>
+                                        <node id="81308" type="fact">
+                                          <name>Requirement specified: Downstream sensor detects air in line</name>
+                                          <label>F1.2.1</label>
+                                          <description>Requirement specified: Downstream sensor detects air in line </description>
+                                          <weight>5</weight>
+                                          <assessment>
+                                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                            <decision degree="0" maxDegree="3" value="0">rejectable</decision>
+                                            <comment>Some info is missing </comment>
+                                            <excluded>false</excluded>
+                                            <userName>Senior Demon</userName>
+                                            <timestamp>2021-01-21T10:22:40</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                              <decision degree="0" maxDegree="3" value="0">rejectable</decision>
+                                              <comment>Some info is missing </comment>
+                                              <excluded>false</excluded>
+                                              <userName>Senior Demon</userName>
+                                              <timestamp>2021-01-21T10:22:40</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                          <nodes>
+                                            <node id="81309" type="reference">
+                                              <name>Safety Requirements.pdf</name>
+                                              <label>Ev1.2.1</label>
+                                              <description></description>
+                                              <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                              <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                              <address>/Safety analysis/Safety Requirements.pdf</address>
+                                              <autoUpdate>false</autoUpdate>
+                                              <validityDate />
+                                              <maxValidityPeriod />
+                                            </node>
+                                            <node id="81310" type="reference">
+                                              <name>Safety Requirements.docx</name>
+                                              <label>Ev1.2.4</label>
+                                              <description></description>
+                                              <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                              <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                              <address>/Safety analysis/Safety Requirements.docx?d=w137a90f53b624214b105c6321f9dfbc3</address>
+                                              <autoUpdate>false</autoUpdate>
+                                              <validityDate />
+                                              <maxValidityPeriod />
+                                            </node>
+                                          </nodes>
+                                        </node>
+                                        <node id="81311" type="fact">
+                                          <name>Test demonstrate the requirement is satisfied</name>
+                                          <label>F1.2.2</label>
+                                          <description>Test demonstrate the requirement is satisfied </description>
+                                          <weight>5</weight>
+                                          <assessment>
+                                            <confidence degree="2" maxDegree="5" value="0.4">with low confidence</confidence>
+                                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                            <comment></comment>
+                                            <excluded>false</excluded>
+                                            <userName>Senior Demon</userName>
+                                            <timestamp>2021-02-23T08:53:25</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="2" maxDegree="5" value="0.4">with low confidence</confidence>
+                                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                              <comment></comment>
+                                              <excluded>false</excluded>
+                                              <userName>Senior Demon</userName>
+                                              <timestamp>2021-02-23T08:53:25</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                          <nodes>
+                                            <node id="81312" type="reference">
+                                              <name>Downstream Monitor Test Report.pdf</name>
+                                              <label>Ev1.2.2</label>
+                                              <description></description>
+                                              <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                              <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                              <address>/V&amp;V/Downstream Monitor Test Report.pdf</address>
+                                              <autoUpdate>false</autoUpdate>
+                                              <validityDate />
+                                              <maxValidityPeriod />
+                                            </node>
+                                            <node id="81313" type="reference">
+                                              <name>Jira report: downstream monitor failure</name>
+                                              <label>Ev1.2.3</label>
+                                              <description></description>
+                                              <repositoryName />
+                                              <repository />
+                                              <address>https://jira.argevide.com/browse/DEMO-1</address>
+                                              <autoUpdate>false</autoUpdate>
+                                              <validityDate />
+                                              <maxValidityPeriod />
+                                            </node>
+                                          </nodes>
+                                        </node>
+                                      </nodes>
+                                    </node>
+                                    <node id="81314" type="information">
+                                      <name>Downstream Monitor design docummentation</name>
+                                      <label></label>
+                                      <description></description>
+                                    </node>
+                                  </nodes>
+                                </node>
+                                <node id="81315" type="assumption">
+                                  <name>Infusion procedures are performed by properly trained personel</name>
+                                  <label>A1.1.1</label>
+                                  <description>Demonstrating qualifications of the personel is out of the scope of this assurance case</description>
+                                  <assessment>
+                                    <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                                    <decision degree="2" maxDegree="3" value="0.6666667">tolerable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                    <userName>Senior Demon</userName>
+                                    <timestamp>2020-06-10T13:37:08</timestamp>
+                                  </assessment>
+                                  <assessmentHistory>
+                                    <assessment isChange="yes">
+                                      <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                                      <decision degree="2" maxDegree="3" value="0.6666667">tolerable</decision>
+                                      <comment></comment>
+                                      <excluded>false</excluded>
+                                      <userName>Senior Demon</userName>
+                                      <timestamp>2020-06-10T13:37:08</timestamp>
+                                    </assessment>
+                                  </assessmentHistory>
+                                </node>
+                                <node id="81316" type="fact">
+                                  <name>Clinician manual and training ensures compatible infusion set</name>
+                                  <label>F1.1.1</label>
+                                  <description>Description 
+Clinician manual and training ensures compatible infusion set 
+Clinician manual and training ensures compatible infusion set 
+Clinician manual and training ensures compatible infusion set 
+
+Assessment criteria 
+Clinician manual and training ensures compatible infusion set 
+Clinician manual and training ensures compatible infusion set </description>
+                                  <weight>5</weight>
+                                  <assessment>
+                                    <confidence degree="3" maxDegree="5" value="0.6">with high confidence</confidence>
+                                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                    <userName>Senior Demon</userName>
+                                    <timestamp>2020-06-10T13:36:47</timestamp>
+                                  </assessment>
+                                  <assessmentHistory>
+                                    <assessment isChange="yes">
+                                      <confidence degree="3" maxDegree="5" value="0.6">with high confidence</confidence>
+                                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                      <comment></comment>
+                                      <excluded>false</excluded>
+                                      <userName>Senior Demon</userName>
+                                      <timestamp>2020-06-10T13:36:47</timestamp>
+                                    </assessment>
+                                  </assessmentHistory>
+                                  <nodes>
+                                    <node id="81317" type="reference">
+                                      <name>Clinician manual.pdf</name>
+                                      <label>Ev1.1.1</label>
+                                      <description>
+Section 1 and 2. </description>
+                                      <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                      <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                      <address>/Manuals/Clinician manual.pdf#page=3</address>
+                                      <autoUpdate>false</autoUpdate>
+                                      <validityDate />
+                                      <maxValidityPeriod />
+                                    </node>
+                                    <node id="81318" type="reference">
+                                      <name>System Description.docx</name>
+                                      <label>Ev1.1.2</label>
+                                      <description></description>
+                                      <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                      <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                      <address>/Pump design/System Description.docx?d=w5a15dafef5164815ad613984df2d7f12</address>
+                                      <autoUpdate>false</autoUpdate>
+                                      <validityDate />
+                                      <maxValidityPeriod />
+                                    </node>
+                                  </nodes>
+                                </node>
+                                <node id="81319" type="fact">
+                                  <name>Clinician manual and training ensures priming the line before use</name>
+                                  <label>F1.1.2</label>
+                                  <description>Description 
+Clinician manual and training ensures priming the line before use 
+Clinician manual and training ensures priming the line before use 
+Clinician manual and training ensures priming the line before use 
+
+Assessment criteria 
+Clinician manual and training ensures priming the line before use 
+Clinician manual and training ensures priming the line before use 
+Clinician manual and training ensures priming the line before use </description>
+                                  <weight>5</weight>
+                                  <assessment>
+                                    <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                    <decision degree="2" maxDegree="3" value="0.6666667">tolerable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                    <userName>Senior Demon</userName>
+                                    <timestamp>2020-06-10T13:36:59</timestamp>
+                                  </assessment>
+                                  <assessmentHistory>
+                                    <assessment isChange="yes">
+                                      <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                      <decision degree="2" maxDegree="3" value="0.6666667">tolerable</decision>
+                                      <comment></comment>
+                                      <excluded>false</excluded>
+                                      <userName>Senior Demon</userName>
+                                      <timestamp>2020-06-10T13:36:59</timestamp>
+                                    </assessment>
+                                  </assessmentHistory>
+                                  <nodes>
+                                    <node id="81320" type="reference">
+                                      <name>Clinician manual.pdf</name>
+                                      <label>Ev1.1.3</label>
+                                      <description></description>
+                                      <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                      <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                      <address>/Manuals/Clinician manual.pdf#page=3</address>
+                                      <autoUpdate>false</autoUpdate>
+                                      <validityDate />
+                                      <maxValidityPeriod />
+                                    </node>
+                                  </nodes>
+                                </node>
+                                <node id="81321" type="fact">
+                                  <name>Clinician manual and training ensures sealed delivery path</name>
+                                  <label>F1.1.3</label>
+                                  <description>The clinician authenticates themselves, the patient, and the liquid pain-killer received from the hospital pharmacy, loads the drug, attaches a flexible tube leading to a needle, primes the tube and needle to remove air, and inserts the needle into the patient.
+ 
+It's the clinician duty to expel air from tube and needle before treatment.</description>
+                                  <assessment>
+                                    <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                    <comment>Test cover all operation modes. Test results positive and verified. </comment>
+                                    <excluded>false</excluded>
+                                    <userName>Senior Demon</userName>
+                                    <timestamp>2021-01-21T10:20:54</timestamp>
+                                  </assessment>
+                                  <assessmentHistory>
+                                    <assessment isChange="yes">
+                                      <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                      <comment>Test cover all operation modes. Test results positive and verified. </comment>
+                                      <excluded>false</excluded>
+                                      <userName>Senior Demon</userName>
+                                      <timestamp>2021-01-21T10:20:54</timestamp>
+                                    </assessment>
+                                  </assessmentHistory>
+                                  <nodes>
+                                    <node id="81322" type="link">
+                                      <name>Clinician manual.pdf</name>
+                                      <label>Ev1.1.4</label>
+                                      <description></description>
+                                      <target id="81320" type="reference">
+                                        <name>Clinician manual.pdf</name>
+                                        <label>Ev1.1.3</label>
+                                      </target>
+                                    </node>
+                                  </nodes>
+                                </node>
+                              </nodes>
+                            </node>
+                          </nodes>
+                        </node>
+                        <node id="81323" type="claim">
+                          <name>Corrective controls are effective</name>
+                          <label>G1.3</label>
+                          <description></description>
+                          <assessment>
+                            <confidence degree="3" maxDegree="5" value="0.6376544">with high confidence</confidence>
+                            <decision degree="2" maxDegree="3" value="0.6021891">tolerable</decision>
+                            <comment></comment>
+                            <excluded>false</excluded>
+                          </assessment>
+                          <nodes>
+                            <node id="81324" type="strategy">
+                              <name>Argument by referring to corrective controls</name>
+                              <label>S1.3.1</label>
+                              <description></description>
+                              <counterArgumentation>false</counterArgumentation>
+                              <assessment>
+                                <confidence degree="3" maxDegree="5" value="0.6376544">with high confidence</confidence>
+                                <decision degree="2" maxDegree="3" value="0.6021891">tolerable</decision>
+                                <comment></comment>
+                                <excluded>false</excluded>
+                              </assessment>
+                              <nodes>
+                                <node id="81325" type="rationale">
+                                  <name>Corrective controls have been identified during adequate Hazard Analysis</name>
+                                  <label>J1.3.1</label>
+                                  <description></description>
+                                  <aggregationRule>Complementary (C-rule)</aggregationRule>
+                                  <assessment>
+                                    <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                    <userName>Senior Demon</userName>
+                                    <timestamp>2020-05-09T22:15:45</timestamp>
+                                  </assessment>
+                                  <assessmentHistory>
+                                    <assessment isChange="yes">
+                                      <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                      <comment></comment>
+                                      <excluded>false</excluded>
+                                      <userName>Senior Demon</userName>
+                                      <timestamp>2020-05-09T22:15:45</timestamp>
+                                    </assessment>
+                                  </assessmentHistory>
+                                </node>
+                                <node id="81326" type="claim">
+                                  <name>Pump halts when air in line is detected</name>
+                                  <label>G1.3.1</label>
+                                  <description></description>
+                                  <weight>5</weight>
+                                  <assessment>
+                                    <confidence degree="3" maxDegree="5" value="0.5649717">with high confidence</confidence>
+                                    <decision degree="1" maxDegree="3" value="0.4203976">opposable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                  </assessment>
+                                  <nodes>
+                                    <node id="81327" type="strategy">
+                                      <name>Argument by refering to the related safety requirement and its implementation</name>
+                                      <label>S1.3.1.1</label>
+                                      <description></description>
+                                      <counterArgumentation>false</counterArgumentation>
+                                      <assessment>
+                                        <confidence degree="3" maxDegree="5" value="0.5649717">with high confidence</confidence>
+                                        <decision degree="1" maxDegree="3" value="0.4203976">opposable</decision>
+                                        <comment></comment>
+                                        <excluded>false</excluded>
+                                      </assessment>
+                                      <nodes>
+                                        <node id="81328" type="rationale">
+                                          <name>If the corresponding safety requirement has been defined and reliably implemented the pump will stop</name>
+                                          <label>J1.3.1.1</label>
+                                          <description></description>
+                                          <aggregationRule>Complementary (C-rule)</aggregationRule>
+                                          <assessment>
+                                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                            <comment></comment>
+                                            <excluded>false</excluded>
+                                            <userName>Senior Demon</userName>
+                                            <timestamp>2020-05-09T22:15:45</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                              <comment></comment>
+                                              <excluded>false</excluded>
+                                              <userName>Senior Demon</userName>
+                                              <timestamp>2020-05-09T22:15:45</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                        </node>
+                                        <node id="81329" type="fact">
+                                          <name>Safety requirement RS.5 to stop the pump is defined</name>
+                                          <label>F1.3.1.1</label>
+                                          <description>Table 4 for requirement 5.4.1.2 specifies that pump rate for air-in-line alarm should be "off". </description>
+                                          <weight>5</weight>
+                                          <assessment>
+                                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                            <decision degree="2" maxDegree="3" value="0.6666667">tolerable</decision>
+                                            <comment></comment>
+                                            <excluded>false</excluded>
+                                            <userName>Senior Demon</userName>
+                                            <timestamp>2020-06-10T15:15:42</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                              <decision degree="2" maxDegree="3" value="0.6666667">tolerable</decision>
+                                              <comment></comment>
+                                              <excluded>false</excluded>
+                                              <userName>Senior Demon</userName>
+                                              <timestamp>2020-06-10T15:15:42</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                          <nodes>
+                                            <node id="81330" type="reference">
+                                              <name>Safety Requirements.pdf</name>
+                                              <label>Ev1.3.1.1</label>
+                                              <description></description>
+                                              <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                              <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                              <address>/Safety analysis/Safety Requirements.pdf#page=2</address>
+                                              <autoUpdate>false</autoUpdate>
+                                              <validityDate />
+                                              <maxValidityPeriod />
+                                            </node>
+                                          </nodes>
+                                        </node>
+                                        <node id="81331" type="fact">
+                                          <name>Safety requirement  5.4.1.2 verified in test process</name>
+                                          <label>F1.3.1.2</label>
+                                          <description></description>
+                                          <assessment>
+                                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                            <decision degree="0" maxDegree="3" value="0">rejectable</decision>
+                                            <comment></comment>
+                                            <excluded>false</excluded>
+                                            <userName>Senior Demon</userName>
+                                            <timestamp>2021-01-21T10:22:59</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                              <decision degree="0" maxDegree="3" value="0">rejectable</decision>
+                                              <comment></comment>
+                                              <excluded>false</excluded>
+                                              <userName>Senior Demon</userName>
+                                              <timestamp>2021-01-21T10:22:59</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                          <nodes>
+                                            <node id="81332" type="reference">
+                                              <name>Software Test Report.pdf</name>
+                                              <label>Ev1.3.1.2</label>
+                                              <description></description>
+                                              <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                              <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                              <address>/V&amp;V/Software Test Report.pdf</address>
+                                              <autoUpdate>false</autoUpdate>
+                                              <validityDate />
+                                              <maxValidityPeriod />
+                                            </node>
+                                          </nodes>
+                                        </node>
+                                        <node id="81333" type="assumption">
+                                          <name>Testing process is reliable</name>
+                                          <label>A1.3.1.1</label>
+                                          <description></description>
+                                          <weight>5</weight>
+                                          <assessment>
+                                            <confidence degree="" maxDegree="5" value="">no assessment</confidence>
+                                            <decision degree="" maxDegree="3" value="">no assessment</decision>
+                                            <comment></comment>
+                                            <excluded>false</excluded>
+                                          </assessment>
+                                        </node>
+                                      </nodes>
+                                    </node>
+                                  </nodes>
+                                </node>
+                                <node id="81334" type="claim">
+                                  <name>Alarm sounded and displayed when air in line detected</name>
+                                  <label>G1.3.2</label>
+                                  <description></description>
+                                  <assessment>
+                                    <confidence degree="5" maxDegree="5" value="0.9000002">for sure</confidence>
+                                    <decision degree="3" maxDegree="3" value="0.9999993">acceptable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                  </assessment>
+                                  <nodes>
+                                    <node id="81335" type="strategy">
+                                      <name>Arguement by refering to the related safety requirement and its implementation</name>
+                                      <label>S1.3.2.1</label>
+                                      <description></description>
+                                      <counterArgumentation>false</counterArgumentation>
+                                      <assessment>
+                                        <confidence degree="5" maxDegree="5" value="0.9000002">for sure</confidence>
+                                        <decision degree="3" maxDegree="3" value="0.9999993">acceptable</decision>
+                                        <comment></comment>
+                                        <excluded>false</excluded>
+                                      </assessment>
+                                      <nodes>
+                                        <node id="81336" type="rationale">
+                                          <name>If the corresponding safety requirement has been defined and reliably implemented the alarm will sound</name>
+                                          <label>J1.3.2.1</label>
+                                          <description></description>
+                                          <aggregationRule>Complementary (C-rule)</aggregationRule>
+                                          <assessment>
+                                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                            <comment></comment>
+                                            <excluded>false</excluded>
+                                            <userName>Senior Demon</userName>
+                                            <timestamp>2020-05-09T22:15:45</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                              <comment></comment>
+                                              <excluded>false</excluded>
+                                              <userName>Senior Demon</userName>
+                                              <timestamp>2020-05-09T22:15:45</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                        </node>
+                                        <node id="81337" type="fact">
+                                          <name>Safety requirement for air-in-line alarm is defined</name>
+                                          <label>F1.3.2.1</label>
+                                          <description>Requirement 5.1.4:
+The PCA pump shall detect air-in-line embolism (bubble). (EC12 3.2.12)
+ 
+Air-in-line alarm in section 3.2.12 Exception Case: Air-in-line Embolism (EC12)
+ </description>
+                                          <assessment>
+                                            <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                            <comment></comment>
+                                            <excluded>false</excluded>
+                                            <userName>Janusz Gorski</userName>
+                                            <timestamp>2014-10-24T08:54:57</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="5" maxDegree="5" value="1">for sure</confidence>
+                                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                              <comment></comment>
+                                              <excluded>false</excluded>
+                                              <userName>Janusz Gorski</userName>
+                                              <timestamp>2014-10-24T08:54:57</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                          <nodes>
+                                            <node id="81338" type="link">
+                                              <name>Definition of safety requirement to sound alarm</name>
+                                              <label>Ev1.3.2.1</label>
+                                              <description></description>
+                                              <target id="81348" type="reference">
+                                                <name>Definition of safety requirement to sound alarm</name>
+                                                <label>Ev4</label>
+                                              </target>
+                                            </node>
+                                            <node id="81339" type="link">
+                                              <name>Safety Requirements.docx</name>
+                                              <label>Ev999</label>
+                                              <description></description>
+                                              <target id="81310" type="reference">
+                                                <name>Safety Requirements.docx</name>
+                                                <label>Ev1.2.4</label>
+                                              </target>
+                                            </node>
+                                          </nodes>
+                                        </node>
+                                        <node id="81340" type="fact">
+                                          <name>Safety requirement  EC12 step 2 verified in the test process</name>
+                                          <label>F1.3.2.2</label>
+                                          <description></description>
+                                          <assessment>
+                                            <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                                            <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                            <comment>Test was incomplete. Two operation modes were out of the test scope. </comment>
+                                            <excluded>false</excluded>
+                                            <userName>System Administrator</userName>
+                                            <timestamp>2020-05-13T11:20:51</timestamp>
+                                          </assessment>
+                                          <assessmentHistory>
+                                            <assessment isChange="yes">
+                                              <confidence degree="4" maxDegree="5" value="0.8">with very high confidence</confidence>
+                                              <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                              <comment>Test was incomplete. Two operation modes were out of the test scope. </comment>
+                                              <excluded>false</excluded>
+                                              <userName>System Administrator</userName>
+                                              <timestamp>2020-05-13T11:20:51</timestamp>
+                                            </assessment>
+                                          </assessmentHistory>
+                                          <nodes>
+                                            <node id="81341" type="link">
+                                              <name>Software Test Report</name>
+                                              <label>Ev1.3.2.2</label>
+                                              <description></description>
+                                              <target id="81355" type="reference">
+                                                <name>Software Test Report</name>
+                                                <label>Ev8</label>
+                                              </target>
+                                            </node>
+                                            <node id="81342" type="link">
+                                              <name>Clinician manual.pdf</name>
+                                              <label></label>
+                                              <description></description>
+                                              <target id="81317" type="reference">
+                                                <name>Clinician manual.pdf</name>
+                                                <label>Ev1.1.1</label>
+                                              </target>
+                                            </node>
+                                          </nodes>
+                                        </node>
+                                      </nodes>
+                                    </node>
+                                  </nodes>
+                                </node>
+                                <node id="81343" type="fact">
+                                  <name>Air in line event recorded in system log</name>
+                                  <label>F1.3.1</label>
+                                  <description></description>
+                                  <assessment>
+                                    <confidence degree="3" maxDegree="5" value="0.6">with high confidence</confidence>
+                                    <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                    <comment></comment>
+                                    <excluded>false</excluded>
+                                    <userName>Senior Demon</userName>
+                                    <timestamp>2020-05-11T13:43:49</timestamp>
+                                  </assessment>
+                                  <assessmentHistory>
+                                    <assessment isChange="yes">
+                                      <confidence degree="3" maxDegree="5" value="0.6">with high confidence</confidence>
+                                      <decision degree="3" maxDegree="3" value="1">acceptable</decision>
+                                      <comment></comment>
+                                      <excluded>false</excluded>
+                                      <userName>Senior Demon</userName>
+                                      <timestamp>2020-05-11T13:43:49</timestamp>
+                                    </assessment>
+                                  </assessmentHistory>
+                                  <nodes>
+                                    <node id="81344" type="reference">
+                                      <name>System log review</name>
+                                      <label>Ev1.3.1</label>
+                                      <description></description>
+                                      <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                                      <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                                      <address />
+                                      <autoUpdate>false</autoUpdate>
+                                      <validityDate />
+                                      <maxValidityPeriod />
+                                    </node>
+                                  </nodes>
+                                </node>
+                              </nodes>
+                            </node>
+                          </nodes>
+                        </node>
+                      </nodes>
+                    </node>
+                  </nodes>
+                </node>
+              </nodes>
+            </node>
+          </nodes>
+        </node>
+        <node id="81345" type="information">
+          <name>Evidence directory</name>
+          <label></label>
+          <description></description>
+          <nodes>
+            <node id="81346" type="information">
+              <name>Safety requirements</name>
+              <label></label>
+              <description></description>
+              <nodes>
+                <node id="81347" type="reference">
+                  <name>Safety Requirements.pdf</name>
+                  <label>Ev3</label>
+                  <description></description>
+                  <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                  <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                  <address>/Safety analysis/Safety Requirements.pdf</address>
+                  <autoUpdate>false</autoUpdate>
+                  <validityDate />
+                  <maxValidityPeriod />
+                </node>
+                <node id="81348" type="reference">
+                  <name>Definition of safety requirement to sound alarm</name>
+                  <label>Ev4</label>
+                  <description></description>
+                  <repositoryName />
+                  <repository />
+                  <address>ICE-PCArequirements.pdf#page=43</address>
+                  <autoUpdate>false</autoUpdate>
+                  <validityDate />
+                  <maxValidityPeriod />
+                </node>
+              </nodes>
+            </node>
+            <node id="81349" type="information">
+              <name>Clinician Manual</name>
+              <label></label>
+              <description></description>
+              <nodes>
+                <node id="81350" type="reference">
+                  <name>Clinician manual, section on infusion equipment</name>
+                  <label>Ev5</label>
+                  <description></description>
+                  <repositoryName>iPUMP-repo - SharePoint</repositoryName>
+                  <repository>https://argevide.sharepoint.com/sites/DEMO/Shared%20Documents/Infusion%20Pump</repository>
+                  <address>/Manuals/Ev11 Clinician manual.pdf</address>
+                  <autoUpdate>false</autoUpdate>
+                  <validityDate />
+                  <maxValidityPeriod />
+                </node>
+                <node id="81351" type="reference">
+                  <name>Clinician manual, section on infusion preparation</name>
+                  <label>Ev6</label>
+                  <description></description>
+                  <repositoryName />
+                  <repository />
+                  <address>Clinician manual.pdf#page=3</address>
+                  <autoUpdate>false</autoUpdate>
+                  <validityDate />
+                  <maxValidityPeriod />
+                </node>
+              </nodes>
+            </node>
+            <node id="81352" type="information">
+              <name>Technical specifications</name>
+              <label></label>
+              <description></description>
+              <nodes>
+                <node id="81353" type="reference">
+                  <name>Sensor technical specification</name>
+                  <label>Ev7</label>
+                  <description></description>
+                  <repositoryName />
+                  <repository />
+                  <address />
+                  <validityDate />
+                  <maxValidityPeriod />
+                </node>
+              </nodes>
+            </node>
+            <node id="81354" type="information">
+              <name>Test reports</name>
+              <label></label>
+              <description></description>
+              <nodes>
+                <node id="81355" type="reference">
+                  <name>Software Test Report</name>
+                  <label>Ev8</label>
+                  <description></description>
+                  <repositoryName />
+                  <repository />
+                  <address />
+                  <validityDate />
+                  <maxValidityPeriod />
+                </node>
+                <node id="81356" type="reference">
+                  <name>Downstream Monitor Test Report</name>
+                  <label>Ev9</label>
+                  <description></description>
+                  <repositoryName />
+                  <repository />
+                  <address />
+                  <validityDate />
+                  <maxValidityPeriod />
+                </node>
+              </nodes>
+            </node>
+          </nodes>
+        </node>
+      </nodes>
+    </node>
+    <interfaces />
+    <metadata />
+  </project>
+  <sections>
+    <section id="1" mainElementId="81290">
+      <sectionElement id="81291" />
+      <sectionElement id="81345" />
+    </section>
+    <section id="2" parentSectionId="1" mainElementId="81291">
+      <sectionElement id="81292" />
+      <sectionElement id="81293" />
+      <sectionElement id="81294" />
+      <sectionElement id="81295" />
+      <sectionElement id="81296" />
+      <sectionElement id="81297" />
+    </section>
+    <section id="3" parentSectionId="2" mainElementId="81297">
+      <sectionElement id="81298" />
+      <sectionElement id="81299" />
+      <sectionElement id="81300" />
+      <sectionElement id="81301" />
+      <sectionElement id="81302" />
+      <sectionElement id="81323" />
+    </section>
+    <section id="4" parentSectionId="3" mainElementId="81302">
+      <sectionElement id="81303" />
+      <sectionElement id="81304" />
+      <sectionElement id="81305" />
+      <sectionElement id="81315" />
+      <sectionElement id="81316" />
+      <sectionElement id="81317" />
+      <sectionElement id="81318" />
+      <sectionElement id="81319" />
+      <sectionElement id="81320" />
+      <sectionElement id="81321" />
+      <sectionElement id="81322" />
+    </section>
+    <section id="5" parentSectionId="4" mainElementId="81305">
+      <sectionElement id="81306" />
+      <sectionElement id="81307" />
+      <sectionElement id="81308" />
+      <sectionElement id="81309" />
+      <sectionElement id="81310" />
+      <sectionElement id="81311" />
+      <sectionElement id="81312" />
+      <sectionElement id="81313" />
+      <sectionElement id="81314" />
+    </section>
+    <section id="6" parentSectionId="3" mainElementId="81323">
+      <sectionElement id="81324" />
+      <sectionElement id="81325" />
+      <sectionElement id="81326" />
+      <sectionElement id="81334" />
+      <sectionElement id="81343" />
+      <sectionElement id="81344" />
+    </section>
+    <section id="7" parentSectionId="6" mainElementId="81326">
+      <sectionElement id="81327" />
+      <sectionElement id="81328" />
+      <sectionElement id="81329" />
+      <sectionElement id="81330" />
+      <sectionElement id="81331" />
+      <sectionElement id="81332" />
+      <sectionElement id="81333" />
+    </section>
+    <section id="8" parentSectionId="6" mainElementId="81334">
+      <sectionElement id="81335" />
+      <sectionElement id="81336" />
+      <sectionElement id="81337" />
+      <sectionElement id="81338" />
+      <sectionElement id="81339" />
+      <sectionElement id="81340" />
+      <sectionElement id="81341" />
+      <sectionElement id="81342" />
+    </section>
+    <section id="9" parentSectionId="1" mainElementId="81345">
+      <sectionElement id="81346" />
+      <sectionElement id="81349" />
+      <sectionElement id="81352" />
+      <sectionElement id="81354" />
+    </section>
+    <section id="10" parentSectionId="9" mainElementId="81346">
+      <sectionElement id="81347" />
+      <sectionElement id="81348" />
+    </section>
+    <section id="11" parentSectionId="9" mainElementId="81349">
+      <sectionElement id="81350" />
+      <sectionElement id="81351" />
+    </section>
+    <section id="12" parentSectionId="9" mainElementId="81352">
+      <sectionElement id="81353" />
+    </section>
+    <section id="13" parentSectionId="9" mainElementId="81354">
+      <sectionElement id="81355" />
+      <sectionElement id="81356" />
+    </section>
+  </sections>
+</report>
