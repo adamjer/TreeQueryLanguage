@@ -1,9 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Magisterka_JsonParsing.Assurance.TreeStructure
 {
@@ -21,10 +17,9 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
 
     public class Link : Node
     {
-        public Target Target { get; set; }
         public Link()
         {
-
+            this.Target = new Target();
         }
     }
 }

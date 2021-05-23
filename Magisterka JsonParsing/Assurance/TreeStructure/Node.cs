@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Magisterka_JsonParsing.Assurance.TreeStructure
 {
@@ -11,26 +9,50 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
     {
         [JsonProperty("@id")]
         public String ID { get; set; }
+        //[JsonProperty("@type")]
+        //public String Type { get; set; }
         [JsonProperty("name")]
         public String Name { get; set; }
         [JsonProperty("label")]
         public String Label { get; set; }
+        [JsonProperty("@tags")]
+        public Tags Tags { get; set; }
         [JsonProperty("description")]
         public String Description { get; set; }
-        [JsonProperty("nodes")]
-        public Nodes Children { get; set; }
-        [JsonProperty("weight")]
-        public String Weight { get; set; }
-        [JsonProperty("assessment")]
-        public Assessment Assessment { get; set; }
-        [JsonProperty("assessmentHistory")]
-        public AssessmentHistory? AssessmentHistory { get; set; }
-        //Strategy
-        [JsonProperty("counterArgumentation")]
-        public String CounterArgumentation { get; set; }
-        //Rationale
+        //Only Reference
+        [JsonProperty("repositoryName")]
+        public String RepositoryName { get; set; }
+        //Only Reference
+        [JsonProperty("repository")]
+        public String Repository { get; set; }
+        //Only Reference
+        [JsonProperty("address")]
+        public String Address { get; set; }
+        //Only Rationale
         [JsonProperty("aggregationRule")]
         public String AggregationRule { get; set; }
+        //Only [Claim, Fact, Assumption]
+        [JsonProperty("weight")]
+        public String Weight { get; set; }
+        //Only Strategy
+        [JsonProperty("counterArgumentation")]
+        public String CounterArgumentation { get; set; }
+        //Only Link
+        [JsonProperty("target")]
+        public Target Target { get; set; }
+        //[JsonProperty("binding")]
+        //public Object Binding { get; set; }
+        [JsonProperty("assessment")]
+        //Only [Claim, Strategy, Assumption, Fact, Rationale, conditionally Link]
+        public Assessment Assessment { get; set; }
+        //Only [Claim, Strategy, Assumption, Fact, Rationale, conditionally Link]
+        [JsonProperty("assessmentHistory")]
+        public AssessmentHistory? AssessmentHistory { get; set; }
+        [JsonProperty("nodes")]
+        public Nodes Children { get; set; }
+        
+        
+        
 
         public Node Parent { get; set; }
 

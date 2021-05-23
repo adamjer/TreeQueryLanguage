@@ -77,7 +77,7 @@ namespace Magisterka_JsonParsing
 
                     //2) daj dowody (evidence) dla faktów, które są w pełni zaakceptowane
                     //    dla XML: w ocenie znacznik <decision> ma parametr value mniejszy niż 1
-                    var y = Arguments.Descendants().OfType<Link>()
+                    //var y = Arguments.Descendants().OfType<Link>()
                         
                         //.Where(n => n.Parent is Fact);
                         //.Where(n => Double.TryParse(n.Parent.Assessment.Decision.Value, out _) && Double.Parse(n.Parent.Assessment.Decision.Value) < 1);

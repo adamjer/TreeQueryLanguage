@@ -34,6 +34,9 @@ namespace Magisterka_JsonParsing.Assurance
         public String Description { get; set; }
         [JsonProperty("node")]
         public Node Root { get; set; }
+        //Interfaces
+        
+        //Metadata
 
         public void Init()
         {

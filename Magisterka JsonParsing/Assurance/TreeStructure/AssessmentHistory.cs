@@ -2,15 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Magisterka_JsonParsing.Assurance.TreeStructure
 {
+    public class AssessmentInHistory : Assessment
+    {
+        [JsonProperty("@isChange")]
+        public String IsChange { get; set; }
+        [JsonProperty("@snapshot")]
+        public String Snapshot { get; set; }
+        [JsonProperty("date")]
+        public DateTime Date { get; set; }
+    }
+
     public class AssessmentHistory
     {
         [JsonProperty("assessment")]
-        private List<Assessment> _assessments { get; set; }
+        private List<AssessmentInHistory> _assessments { get; set; }
 
         public Assessment At(int index)
         {

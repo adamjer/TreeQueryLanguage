@@ -1,9 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Magisterka_JsonParsing.Assurance.TreeStructure
 {
@@ -33,8 +29,6 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
 
         public class Assessment
         {
-            [JsonProperty("@isChange")]
-            public String IsChange { get; set; }
             [JsonProperty("confidence")]
             public Confidence Confidence { get; set; }
             [JsonProperty("decision")]
