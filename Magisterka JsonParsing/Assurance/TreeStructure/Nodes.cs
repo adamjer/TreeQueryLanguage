@@ -59,6 +59,32 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
 
             throw new Exception("Error: Exception in function Add() in class Nodes");
         }
+
+        public void AddRange(IEnumerable<Node> nodes)
+        {
+            try
+            {
+                this._nodes.AddRange(nodes);
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.Out.WriteLine(e.Message);
+            }
+
+            throw new Exception("Error: Exception in function Add() in class Nodes");
+        }
+
+        public void Clear()
+        {
+            this._nodes.Clear();
+        }
+
+        public void Clear(Node node)
+        {
+            this.Clear();
+            this.Add(node);
+        }
     }
 }
 

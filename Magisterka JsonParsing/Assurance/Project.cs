@@ -41,6 +41,7 @@ namespace Magisterka_JsonParsing.Assurance
         public void Init()
         {
             this.InitParents(this.Root);
+            this.InitLinks(this.Root.Descendants());
         }
 
         private void InitParents(Node Parent)
@@ -49,6 +50,17 @@ namespace Magisterka_JsonParsing.Assurance
             {
                 Parent.Children.At(i).Parent = Parent;
                 InitParents(Parent.Children.At(i));
+            }
+        }
+
+        private void InitLinks(IEnumerable<Node> descendants)
+        {
+            foreach (Link link in descendants.OfType<Link>())
+            {
+                Node target = descendants.Where(n => n.ID == link.Target.ID).FirstOrDefault();
+                if (target is null)
+                    throw new Exception($"Error: Target.ID={target.ID} not found in descendants!");
+                link.Children.Add(target);
             }
         }
     }

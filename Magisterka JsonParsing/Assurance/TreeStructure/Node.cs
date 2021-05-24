@@ -50,9 +50,6 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
         public AssessmentHistory? AssessmentHistory { get; set; }
         [JsonProperty("nodes")]
         public Nodes Children { get; set; }
-        
-        
-        
 
         public Node Parent { get; set; }
 
@@ -78,7 +75,17 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
             return this.Children.Count == 0;
         }
 
-        public IEnumerable<Node> Descendants()
+        public void Add(Node node)
+        {
+            this.Children.Add(node);
+        }
+
+        public void AddRange(IEnumerable<Node> nodes)
+        {
+            this.Children.AddRange(nodes);
+        }
+
+        public virtual IEnumerable<Node> Descendants()
         {
             for (int i = 0; i < this.Children.Count; i++)
             {
