@@ -124,5 +124,10 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
                 }
             }
         }
+
+        public bool Contains<T>()
+        {
+            return this.Children.Contains<T>();
+        }
     }
 }

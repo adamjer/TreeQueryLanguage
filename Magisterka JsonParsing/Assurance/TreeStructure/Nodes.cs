@@ -85,6 +85,11 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
             this.Clear();
             this.Add(node);
         }
+
+        public bool Contains<T>()
+        {
+            return this._nodes.OfType<T>().FirstOrDefault() is null ? false : true;
+        }
     }
 }
 

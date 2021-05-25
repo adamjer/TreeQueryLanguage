@@ -75,7 +75,11 @@ namespace Magisterka_JsonParsing
                     var x3 = Arguments.Descendants().Where(n => n.Assessment.Confidence.Text == "");
                     //zwraca pustą listę
 
-                    var links = Arguments.Descendants();
+                    var facts = Arguments.Descendants()
+                        .Where(n => n is Fact)
+                        .Where(n => n.Descendants()
+                            .Any(m => m.Name.ToLower().Contains("manual"))
+                        );
 
                     //2) daj dowody (evidence) dla faktów, które są w pełni zaakceptowane
                     //    dla XML: w ocenie znacznik <decision> ma parametr value mniejszy niż 1
