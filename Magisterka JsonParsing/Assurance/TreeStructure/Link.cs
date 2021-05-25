@@ -97,13 +97,17 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
 
         public override IEnumerable<Node> Descendants()
         {
-            yield break;
-            //duplicated descendants
-            //for (int i = 0; i < this.Children.Count; i++)
-            //{
-            //    
-            //    yield return this.Children.At(i);
-            //}
+            //yield break;
+            for (int i = 0; i < this.Children.Count; i++)
+            {
+                yield return this.Children.At(i);
+
+                var descendants = this.Children.At(i).Descendants();
+                foreach (var grandChild in descendants)
+                {
+                    yield return grandChild;
+                }
+            }
         }
 
         public void ChangeTarget(Node node)
