@@ -30,8 +30,8 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
 
         public static bool operator ==(Target t1, Target t2)
         {
-            if ((object)t1 == null)
-                return (object)t2 == null;
+            if (t1 is null)
+                return t2 is null;
 
             return t1.Equals(t2);
         }
@@ -50,8 +50,8 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
 
         public static bool operator ==(Target t1, Node t2)
         {
-            if ((object)t1 == null)
-                return (object)t2 == null;
+            if (t1 is null)
+                return t2 is null;
 
             return t1.Equals(t2);
         }
@@ -73,10 +73,10 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
             if (obj is null)
                 return false;
 
-            if (obj is Target)
-                return this.Equals((Target)obj);
-            else if (obj is Node)
-                return this.Equals((Node)obj);
+            if (obj is Target target)
+                return this.Equals(target);
+            else if (obj is Node node)
+                return this.Equals(node);
 
             return false;
         }

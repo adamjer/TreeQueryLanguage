@@ -219,7 +219,7 @@ namespace Magisterka_JsonParsing
         public TreeStructure.Root Arguments { get; set; }
 
 
-        private TreeStructure.Node GetParent(IList<TreeStructure.Node> nodes, int parentId)
+        private static TreeStructure.Node GetParent(IList<TreeStructure.Node> nodes, int parentId)
         {
             foreach (TreeStructure.Node node in nodes)
             {
@@ -248,7 +248,7 @@ namespace Magisterka_JsonParsing
                     }
                     else
                     {
-                        TreeStructure.Node parent = this.GetParent(nodesToGetParents, node.ParentId);
+                        TreeStructure.Node parent = GetParent(nodesToGetParents, node.ParentId);
                         createdNode.SupportingNode = parent;
                         parent.SupportedNodes.Add(createdNode);
                     }
@@ -273,7 +273,7 @@ namespace Magisterka_JsonParsing
                 }
                 else
                 {
-                    TreeStructure.Node parent = this.GetParent(nodesToGetParents, node.ParentId);
+                    TreeStructure.Node parent = GetParent(nodesToGetParents, node.ParentId);
                     createdNode.SupportingNode = parent;
                     parent.SupportedNodes.Add(createdNode);
                 }

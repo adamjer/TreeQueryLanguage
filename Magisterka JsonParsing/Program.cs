@@ -10,6 +10,8 @@ using System.Xml;
 using Newtonsoft.Json.Linq;
 using Magisterka_JsonParsing.Assurance;
 using Magisterka_JsonParsing.Assurance.TreeStructure;
+using Z.Expressions;
+using System.Dynamic;
 
 namespace Magisterka_JsonParsing
 {
@@ -80,6 +82,27 @@ namespace Magisterka_JsonParsing
                         .Where(n => n.Descendants()
                             .Any(m => m.Name.ToLower().Contains("manual"))
                         );
+
+
+                    dynamic expandoObject = new ExpandoObject();
+                    expandoObject.Arguments = Arguments;
+
+                    var result = Eval.Execute<IEnumerable<Node>>(@"
+                            Arguments.Descendants().Where(n => n.Name.ToLower().Contains(""manual""));
+                        ", expandoObject);
+
+
+                    Z.Expressions.EvalManager.DefaultContext.RegisterType(typeof(Fact));
+
+                    Fact fact = new Fact();
+                    var result2 = Arguments.Descendants().Execute<IEnumerable<Node>>(@"Where(n => n is Fact)");
+
+                    var result1 = Arguments.Descendants().Execute<IEnumerable<Node>>(
+                        @"Where(n => n is Fact)" +
+                        @".Where(n => n.Descendants()" +
+                            @".Any(m => m.Name.ToLower().Contains(""manual""))" +
+                        @")"
+                    );
 
                     //2) daj dowody (evidence) dla faktów, które są w pełni zaakceptowane
                     //    dla XML: w ocenie znacznik <decision> ma parametr value mniejszy niż 1

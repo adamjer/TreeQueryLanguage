@@ -41,7 +41,7 @@ namespace Magisterka_JsonParsing.Assurance
         public void Init()
         {
             this.InitParents(this.Root);
-            this.InitLinks(this.Root.Descendants());
+            InitLinks(this.Root.Descendants());
         }
 
         private void InitParents(Node Parent)
@@ -53,7 +53,7 @@ namespace Magisterka_JsonParsing.Assurance
             }
         }
 
-        private void InitLinks(IEnumerable<Node> descendants)
+        private static void InitLinks(IEnumerable<Node> descendants)
         {
             foreach (Link link in descendants.OfType<Link>())
             {

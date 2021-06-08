@@ -65,12 +65,12 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
             this.Children = new Nodes();
         }
 
-        public bool isRoot()
+        public bool IsRoot()
         {
             return this.Parent == null;
         }
 
-        public bool isLeaf()
+        public bool IsLeaf()
         {
             return this.Children.Count == 0;
         }

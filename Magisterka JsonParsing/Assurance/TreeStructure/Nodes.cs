@@ -18,8 +18,10 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
 
         public Nodes(Node node)
         {
-            this._nodes = new List<Node>();
-            this._nodes.Add(node);
+            this._nodes = new List<Node>
+            {
+                node
+            };
         }
 
         public Nodes(List<Node> nodes)
@@ -88,7 +90,7 @@ namespace Magisterka_JsonParsing.Assurance.TreeStructure
 
         public bool Contains<T>()
         {
-            return this._nodes.OfType<T>().FirstOrDefault() is null ? false : true;
+            return this._nodes.OfType<T>().FirstOrDefault() is not null;
         }
     }
 }
