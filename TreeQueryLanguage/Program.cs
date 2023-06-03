@@ -8,12 +8,12 @@ using Newtonsoft.Json;
 using Microsoft.SqlServer;
 using System.Xml;
 using Newtonsoft.Json.Linq;
-using Magisterka_JsonParsing.Assurance;
-using Magisterka_JsonParsing.Assurance.TreeStructure;
+using TreeQueryLanguage.Assurance;
+using TreeQueryLanguage.Assurance.TreeStructure;
 using Z.Expressions;
 using System.Dynamic;
 
-namespace Magisterka_JsonParsing
+namespace TreeQueryLanguage
 {
     class Program
     {
@@ -93,8 +93,6 @@ namespace Magisterka_JsonParsing
 
 
                     Z.Expressions.EvalManager.DefaultContext.RegisterType(typeof(Fact));
-
-                    Fact fact = new Fact();
                     var result2 = Arguments.Descendants().Execute<IEnumerable<Node>>(@"Where(n => n is Fact)");
 
                     var result1 = Arguments.Descendants().Execute<IEnumerable<Node>>(

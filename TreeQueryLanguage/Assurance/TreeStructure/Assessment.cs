@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Magisterka_JsonParsing.Assurance.TreeStructure
+namespace TreeQueryLanguage.Assurance.TreeStructure
 {
         public class Confidence
         {

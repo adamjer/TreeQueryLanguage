@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Magisterka_JsonParsing
+namespace TreeQueryLanguage
 {
     namespace TreeStructure
     {

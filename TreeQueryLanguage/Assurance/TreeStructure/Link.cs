@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Magisterka_JsonParsing.Assurance.TreeStructure
+namespace TreeQueryLanguage.Assurance.TreeStructure
 {
     public class Target
     {

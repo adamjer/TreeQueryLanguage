@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Magisterka_JsonParsing.Assurance.TreeStructure
+namespace TreeQueryLanguage.Assurance.TreeStructure
 {
     public class Nodes
     {

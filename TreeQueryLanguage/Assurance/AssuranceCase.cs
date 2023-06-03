@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Magisterka_JsonParsing.Assurance.TreeStructure;
+using TreeQueryLanguage.Assurance.TreeStructure;
 
-namespace Magisterka_JsonParsing.Assurance
+namespace TreeQueryLanguage.Assurance
 {
     public class AssuranceCase
     {

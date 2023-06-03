@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Magisterka_JsonParsing.Assurance.TreeStructure
+namespace TreeQueryLanguage.Assurance.TreeStructure
 {
     public class Reference : Node
     {

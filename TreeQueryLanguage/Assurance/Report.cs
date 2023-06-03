@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Magisterka_JsonParsing.Assurance
+namespace TreeQueryLanguage.Assurance
 {
     public class Report
     {
