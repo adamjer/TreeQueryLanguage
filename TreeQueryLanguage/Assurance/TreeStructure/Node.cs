@@ -5,41 +5,42 @@ using System.Linq;
 
 namespace TreeQueryLanguage.Assurance.TreeStructure
 {
+#nullable enable
     public abstract class Node
     {
         [JsonProperty("@id")]
-        public String ID { get; set; }
+        public String? ID { get; set; }
         //[JsonProperty("@type")]
         //public String Type { get; set; }
         [JsonProperty("name")]
-        public String Name { get; set; }
+        public String? Name { get; set; }
         [JsonProperty("label")]
-        public String Label { get; set; }
+        public String? Label { get; set; }
         [JsonProperty("@tags")]
-        public Tags Tags { get; set; }
+        public Tags? Tags { get; set; }
         [JsonProperty("description")]
-        public String Description { get; set; }
+        public String? Description { get; set; }
         //Only Reference
         [JsonProperty("repositoryName")]
-        public String RepositoryName { get; set; }
+        public String? RepositoryName { get; set; }
         //Only Reference
         [JsonProperty("repository")]
-        public String Repository { get; set; }
+        public String? Repository { get; set; }
         //Only Reference
         [JsonProperty("address")]
-        public String Address { get; set; }
+        public String? Address { get; set; }
         //Only Rationale
         [JsonProperty("aggregationRule")]
-        public String AggregationRule { get; set; }
+        public String? AggregationRule { get; set; }
         //Only [Claim, Fact, Assumption]
         [JsonProperty("weight")]
-        public String Weight { get; set; }
+        public String? Weight { get; set; }
         //Only Strategy
         [JsonProperty("counterArgumentation")]
-        public String CounterArgumentation { get; set; }
+        public String? CounterArgumentation { get; set; }
         //Only Link
         [JsonProperty("target")]
-        public Target Target { get; set; }
+        public Target? Target { get; set; }
         //[JsonProperty("binding")]
         //public Object Binding { get; set; }
         [JsonProperty("assessment")]
@@ -51,7 +52,7 @@ namespace TreeQueryLanguage.Assurance.TreeStructure
         [JsonProperty("nodes")]
         public Nodes Children { get; set; }
 
-        public Node Parent { get; set; }
+        public Node? Parent { get; set; }
 
         public Node()
         {
@@ -109,14 +110,14 @@ namespace TreeQueryLanguage.Assurance.TreeStructure
             }
         }
 
-        public IEnumerable<Node> Supported(Root root)
+        public IEnumerable<Node?> Supported(Root root)
         {
             for (int i = 0; i < this.Children.Count; i++)
             {
                 var child = this.Children.At(i);
                 if (child is Link)
                 {
-                    yield return root.Descendants().Where(n => n.ID == child.ID).FirstOrDefault();
+                    yield return root.Descendants().FirstOrDefault(n => n.ID == child.ID);
                 }
                 else
                 {

@@ -17,14 +17,14 @@ namespace TreeQueryLanguage
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             try
             {
                 string file = Path.GetFullPath("Argumentations/Device safety - XML report.xml");
                 //file = Path.GetFullPath("Argumentations/test.json");
-                XmlDocument doc = new XmlDocument();
-                using (StreamReader sr = new StreamReader(file))
+                XmlDocument doc = new();
+                using (StreamReader sr = new(file))
                 {
                     string xmlRaw = sr.ReadToEnd();
                     doc.LoadXml(PrepareXML(xmlRaw));
@@ -34,7 +34,7 @@ namespace TreeQueryLanguage
                     AssuranceCase report = JsonConvert.DeserializeObject<AssuranceCase>(json, new ArgumentsConverter());
                     report.Report.Project.Init();
 
-                    Root Arguments = new Root();
+                    Root Arguments = new();
                     Arguments.Children.Add(report.Report.Project.Root);
 
                     //1) daj elementy argumentacji, które mają pusty opis oceny
@@ -56,7 +56,7 @@ namespace TreeQueryLanguage
                 file = Path.GetFullPath("Argumentations/Infusion pump air-in-line hazard assurance case.xml");
                 //file = Path.GetFullPath("Argumentations/test.json");
                 doc = new XmlDocument();
-                using (StreamReader sr = new StreamReader(file))
+                using (StreamReader sr = new(file))
                 {
                     string xmlRaw = sr.ReadToEnd();
                     doc.LoadXml(PrepareXML(xmlRaw));
@@ -66,7 +66,7 @@ namespace TreeQueryLanguage
                     AssuranceCase report = JsonConvert.DeserializeObject<AssuranceCase>(json, new ArgumentsConverter());
                     report.Report.Project.Init();
 
-                    Root Arguments = new Root();
+                    Root Arguments = new();
                     Arguments.Children.Add(report.Report.Project.Root);
 
                     //1) daj elementy argumentacji, które mają pusty opis oceny
