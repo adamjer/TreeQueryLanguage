@@ -13,6 +13,13 @@ namespace TreeQueryLanguage.Assurance
     {
         [JsonProperty("report")]
         public Report Report { get; set; }
+
+        public Node Root { get { return Report.Project.Root; } }
+
+        public void Init()
+        {
+            Report.Project.Init();
+        }
     }
 
     public class ArgumentsConverter : JsonConverter

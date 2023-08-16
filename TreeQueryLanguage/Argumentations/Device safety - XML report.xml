@@ -23,7 +23,7 @@
           <label>Claim 1</label>
           <description></description>
           <assessment>
-            <confidence degree="4" maxDegree="5" value="0.7027779">with very high confidence</confidence>
+            <confidence degree="4" maxDegree="5" value="0.7027779"></confidence>
             <decision degree="3" maxDegree="3" value="0.9516917">acceptable</decision>
             <comment></comment>
             <excluded>false</excluded>

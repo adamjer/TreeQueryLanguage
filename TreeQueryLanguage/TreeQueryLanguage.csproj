@@ -8,6 +8,7 @@
 
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <StartupObject>TreeQueryLanguage.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

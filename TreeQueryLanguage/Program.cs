@@ -27,7 +27,7 @@ namespace TreeQueryLanguage
                 using (StreamReader sr = new(file))
                 {
                     string xmlRaw = sr.ReadToEnd();
-                    doc.LoadXml(PrepareXML(xmlRaw));
+                    doc.LoadXml(Helpers.PrepareXML(xmlRaw));
 
                     string json = JsonConvert.SerializeXmlNode(doc);
 
@@ -40,9 +40,9 @@ namespace TreeQueryLanguage
                     //1) daj elementy argumentacji, które mają pusty opis oceny
                     var x1 = Arguments.Descendants().Where(n => n.Assessment.Comment == "");
                     //zwraca 8 elementów
-                    var x2 = Arguments.Descendants().Where(n => n.Assessment.Decision.Text == "");
+                    //var x2 = Arguments.Descendants().Where(n => n.Assessment.Decision.Text == "");
                     //zwraca pustą listę
-                    var x3 = Arguments.Descendants().Where(n => n.Assessment.Confidence.Text == "");
+                    //var x3 = Arguments.Descendants().Where(n => n.Assessment.Confidence.Text == "");
                     //zwraca pustą listę
 
                     //2) daj dowody (evidence) dla faktów, które są w pełni zaakceptowane
@@ -59,7 +59,7 @@ namespace TreeQueryLanguage
                 using (StreamReader sr = new(file))
                 {
                     string xmlRaw = sr.ReadToEnd();
-                    doc.LoadXml(PrepareXML(xmlRaw));
+                    doc.LoadXml(Helpers.PrepareXML(xmlRaw));
 
                     string json = JsonConvert.SerializeXmlNode(doc);
 
@@ -72,9 +72,9 @@ namespace TreeQueryLanguage
                     //1) daj elementy argumentacji, które mają pusty opis oceny
                     var x1 = Arguments.Descendants().Where(n => n.Assessment.Comment == "");
                     //zwraca 8 elementów
-                    var x2 = Arguments.Descendants().Where(n => n.Assessment.Decision.Text == "");
+                    //var x2 = Arguments.Descendants().Where(n => n.Assessment.Decision.Text == "");
                     //zwraca pustą listę
-                    var x3 = Arguments.Descendants().Where(n => n.Assessment.Confidence.Text == "");
+                    //var x3 = Arguments.Descendants().Where(n => n.Assessment.Confidence.Text == "");
                     //zwraca pustą listę
 
                     var facts = Arguments.Descendants()
@@ -105,32 +105,19 @@ namespace TreeQueryLanguage
                     //2) daj dowody (evidence) dla faktów, które są w pełni zaakceptowane
                     //    dla XML: w ocenie znacznik <decision> ma parametr value mniejszy niż 1
                     //var y = Arguments.Descendants().OfType<Link>()
-                        
-                        //.Where(n => n.Parent is Fact);
-                        //.Where(n => Double.TryParse(n.Parent.Assessment.Decision.Value, out _) && Double.Parse(n.Parent.Assessment.Decision.Value) < 1);
+
+                    //.Where(n => n.Parent is Fact);
+                    //.Where(n => Double.TryParse(n.Parent.Assessment.Decision.Value, out _) && Double.Parse(n.Parent.Assessment.Decision.Value) < 1);
                 }
             }
-            catch(IOException e)
+            catch (IOException e)
             {
                 Console.WriteLine(e.Message);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-        }
-
-        public static string PrepareXML(string xml)
-        {
-            string result = xml.Replace(@"<report>", @"<report xmlns:json='http://james.newtonking.com/projects/json'>")
-                .ReplaceFirst(@"<node ", @"<root ")
-                .Replace(@"<node ", @"<node json:Array='true' ")
-                .Replace(@"<section ", @"<section json:Array='true' ")
-                .Replace(@"<sectionElement ", @"<sectionElement json:Array='true' ")
-                .Replace(@"<assessment isChange=", @"<assessment json:Array='true' isChange=")
-                .ReplaceFirst(@"<root ", @"<node ");
-
-            return result;
         }
     }
 }
